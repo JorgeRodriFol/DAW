@@ -61,4 +61,5 @@ html, body {
 }
 .form-container{
     background-color: rgba(255, 219, 142, 0.815);
+    padding-top: 5px;
 }
