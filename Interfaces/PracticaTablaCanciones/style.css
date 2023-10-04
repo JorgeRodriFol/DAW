@@ -33,11 +33,6 @@ textarea{
     border-collapse: collapse;
     border-radius: 5px;
 }
-#imgPreview{
-    align-items: center;
-    width: 50%;
-    height: 50%;
-}
 #cuarentaPrincipales{
     width: 80px;
     height: 80px;
