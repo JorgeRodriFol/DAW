@@ -16,7 +16,7 @@
         <li><a href="./Ejercicio6/Ejercicio6.php">Ejercicio6.php</a></li>
         <li><a href="./Ejercicio7/Ejercicio7.php">Ejercicio7.php</a></li>
         <li><a href="./Ejercicio8/Ejercicio8.php">Ejercicio8.php</a></li>
-        <li><a href="./Confirmacion1.php">Confirmacion1.php</a></li>
+        <li><a href="./HojasDeEjercicios/indexHojasdeEjercicios.php">indexHojasdeEjercicios.php</a></li>
     </ul>
 </body>
 </html>
