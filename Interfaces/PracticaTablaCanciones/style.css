@@ -1,5 +1,12 @@
-table, th, td {
-    border: 1px solid black;
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 75%;
+    height: 50%;
+    
+}
+td,th{
+    border: 2px solid black;
     border-collapse: collapse;
 }
 #image{
@@ -33,4 +40,25 @@ textarea{
     width: 80px;
     height: 30px;
     transform: translateY(45%);
+}
+#reset{
+    margin-left: 20px;
+}
+#submit{
+    margin-left: 40px;
+}
+#buttons{
+    margin-top:20px;
+}
+.table-container{
+    background-color: rgba(255, 150, 150, 0.719);
+    height: 90%;
+    padding-top: 5%;
+}
+html, body {  
+    margin:0px;  
+    height:100%;  
+}
+.form-container{
+    background-color: rgba(255, 219, 142, 0.815);
 }
