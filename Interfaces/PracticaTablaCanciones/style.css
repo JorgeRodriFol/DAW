@@ -1,13 +1,20 @@
 table{
-    border: 2px solid black;
-    border-collapse: collapse;
+    border: 2px inset black;
     width: 75%;
     height: 50%;
+    background-color: white;
     
 }
 td,th{
-    border: 2px solid black;
-    border-collapse: collapse;
+    border: 2px inset black;
+    text-align: center;
+    color: white;
+}
+td{
+    background-color: black;
+}
+th{
+    background-color: rgb(0, 26, 255);
 }
 #image{
     margin-right: 50px;
@@ -62,4 +69,9 @@ html, body {
 .form-container{
     background-color: rgba(255, 219, 142, 0.815);
     padding-top: 5px;
+    padding-bottom: 10px;
+}
+.personal, .cancion{
+    border-bottom: 5px solid rgb(3, 83, 255);
+    border-collapse: collapse;
 }
