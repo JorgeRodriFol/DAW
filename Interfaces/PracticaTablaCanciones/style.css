@@ -19,3 +19,8 @@ textarea{
     border-collapse: collapse;
     border-radius: 5px;
 }
+img{
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
