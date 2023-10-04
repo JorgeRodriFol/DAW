@@ -19,8 +19,18 @@ textarea{
     border-collapse: collapse;
     border-radius: 5px;
 }
-img{
+#imgPreview{
     align-items: center;
     width: 50%;
     height: 50%;
+}
+#cuarentaPrincipales{
+    width: 80px;
+    height: 80px;
+    transform: translateY(45%);
+}
+#googleImg{
+    width: 80px;
+    height: 30px;
+    transform: translateY(45%);
 }
