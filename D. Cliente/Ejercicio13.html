@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let notas = 0;
+        for(let i = 1; i <= 3; ++i){
+            notas+= parseInt(prompt("resultado de la nota "+i, 0));
+        }
+        let media = parseInt(notas/3);
+        if(media < 5){
+            console.log("Media: "+media+" SUSPENSO");
+        }else{
+            console.log("Media: "+media+" APROBADO");
+        }
+    </script>
+</body>
+</html>

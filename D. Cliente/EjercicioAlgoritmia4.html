@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Indique un numero para calcular su factorial", 1));
+        let resultado = 1;
+        let indice = 2;
+        factorial(numero, resultado, indice);
+        function factorial(numero, resultado, indice){
+            resultado= resultado * indice;
+            indice++;
+            if(indice <= numero){
+                factorial(numero, resultado, indice);
+            }else{
+                console.log(resultado);
+            }
+        }
+    </script>
+</body>
+</html>

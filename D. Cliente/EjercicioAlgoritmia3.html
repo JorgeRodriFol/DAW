@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let limite = parseInt(prompt("Indica un numero limite", 1));
+        let fin = false;
+        let resultado = 0;
+        let indice = 1
+        while(fin == false){
+            if((3*indice) < limite){
+                if((3*indice)%5 == 0){
+                    resultado+= (3*indice);
+                }
+                indice++;
+            }else{
+                fin = true;
+            }
+        }
+        console.log(resultado);
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let datoAIntroducir = prompt("Que tipo va a introducir ºC o ºF", "ºC");
+        switch(datoAIntroducir){
+            case "ºC": celsiusAFahrenheit(prompt("Introduzca la temperatura",0)); break;
+            case "ºF": fahrenheitACelsius(prompt("Introduzca la temperatura",0)); break;
+        }
+        function celsiusAFahrenheit(p1){
+            console.log((p1*9/5)+32);
+        }
+        function fahrenheitACelsius(p1){
+            console.log((p1-32)*5/9);
+        }
+    </script>
+</body>
+</html>
