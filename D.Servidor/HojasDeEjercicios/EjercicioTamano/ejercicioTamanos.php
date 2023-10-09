@@ -8,11 +8,19 @@
 </head>
 <body>
     <div>
-        <?php
-            echo("<svg width='400' height='150'> <circle cx='50' cy='50' r='".rand(5,150)."px' fill='rgb(".rand(0,255).", ".rand(0,255).", ".rand(0,255)."' />   </svg>");
-            echo("<svg width='400' height='150'> <circle cx='50' cy='50' r='".rand(5,150)."px' fill='rgb(".rand(0,255).", ".rand(0,255).", ".rand(0,255)."' />   </svg>");
-            echo("<svg width='400' height='150'> <circle cx='50' cy='50' r='".rand(5,150)."px' fill='rgb(".rand(0,255).", ".rand(0,255).", ".rand(0,255)."' />   </svg>");
-        ?>
+        <svg width='1000' height='1000'>
+            <?php
+                $radio1 = rand(5,150);
+                $radio2 = rand(5,150);
+                $radio3 = rand(5,150);
+                $distancia2 = $radio2+$radio1*2;
+                $distancia3 = $radio3+$distancia2+$radio2;
+                echo("<circle cx='$radio1' cy='150' r='".$radio1."px' fill='rgb(".rand(0,255).", ".rand(0,255).", ".rand(0,255)."' />");
+                echo("<circle cx='$distancia2' cy='150' r='".$radio2."px' fill='rgb(".rand(0,255).", ".rand(0,255).", ".rand(0,255)."' />");
+                echo("<circle cx='$distancia3' cy='150' r='".$radio3."px' fill='rgb(".rand(0,255).", ".rand(0,255).", ".rand(0,255)."' />");
+            ?>
+        </svg>
+        
     </div>
 </body>
 </html>

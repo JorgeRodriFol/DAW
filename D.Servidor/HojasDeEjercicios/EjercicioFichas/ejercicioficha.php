@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        $posicion = rand(1,3);
+        $posicion = rand(1,6);
         echo("<img src='dado$posicion.jpeg' alt='$posicion'><br><br>");
         echo("<img src='ficha$posicion.png' alt='$posicion'><br><br>");
     ?>

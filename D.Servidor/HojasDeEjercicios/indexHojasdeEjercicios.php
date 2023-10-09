@@ -11,7 +11,7 @@
         <li><a href="./Ejercicio1/ejercicio1.php">Ejercicio1.php</a></li>
         <li><a href="./Ejercicio2/Ejercicio2.php">Ejercicio2.php</a></li>
         <li><a href="./EjercicioFichas/ejercicioficha.php">EjercicioFichas.php</a></li>
-        <li><a href="./EjercicioTamano/ejercicioTamanos.php">EjercicioRGB.php</a></li>
+        <li><a href="./EjercicioMezcla/ejercicioMezcla.php">EjercicioRGB.php</a></li>
     </ul>
 </body>
 </html>
