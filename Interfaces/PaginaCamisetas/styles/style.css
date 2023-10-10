@@ -39,3 +39,6 @@ body {
 .body .recomendadas h3{
     margin-left: 5px;
 }
+.body .recomendadas .producto:hover{
+    transform: scale(1.1);
+}
