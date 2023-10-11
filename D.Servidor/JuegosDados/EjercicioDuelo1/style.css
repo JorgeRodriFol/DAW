@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+}
+
+.jugador1{
+    float: left;
+    background-color: rgb(0, 81, 255);
+    color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.jugador2{
+    float: left;    
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+}
+
+.juego{
+    padding-left: 40%;
+}
+
+.resultado{
+    padding-top: 5px;
+    clear: both;
+    text-align: center;
+    transform: translate(-35%);
+}

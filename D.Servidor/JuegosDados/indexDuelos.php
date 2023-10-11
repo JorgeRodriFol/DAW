@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Ejercicios:</p>
-    <a href="./EjercicioParejas/ejercicioParejas.php">Ejercicio de parejas</a>
-    <a href="./JuegosDados/indexDuelos.php">Ejercicio de duelo</a>
+    <a href="./EjercicioDuelo2/duelo.php">2 jugadores</a>
 </body>
 </html>
