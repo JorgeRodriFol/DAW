@@ -19,5 +19,6 @@ body {
     color: black;
 }
 .user{
-    margin: auto;
+    padding-left: 50%;
+    padding-right: 50%;
 }
