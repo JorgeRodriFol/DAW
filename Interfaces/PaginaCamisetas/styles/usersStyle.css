@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #d8d8d8;
 }
 .topnav {
     overflow: hidden;
@@ -21,4 +22,14 @@ body {
 .user{
     padding-left: 50%;
     padding-right: 50%;
+}
+.favoritas>a{
+    float: left;
+    border-style: solid;
+    border-width: 2px;
+    margin: 4px;
+}
+
+.favoritas>a>img:hover{
+    transform: scale(1.1);
 }

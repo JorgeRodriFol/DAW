@@ -49,6 +49,7 @@ input[type="radio"]:checked ~ .like {
 
 body {
   margin: 0;
+  background-color: #d8d8d8;
 }
 
 .topnav {
@@ -94,6 +95,7 @@ body {
   border-radius: 5px;
   border-width: 3px;
   margin-right: 47%;
+  background-color: #9c9c9c;
 }
 
 .talla{
@@ -104,7 +106,7 @@ body {
 }
 
 input[type="radio"]:checked +.talla{
-  background-color: rgb(109, 143, 255);
+  background-color: rgb(194, 194, 194);
 }
 
 .detalles{
