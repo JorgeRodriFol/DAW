@@ -24,7 +24,7 @@ body {
     float: right;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 22px 16px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -41,11 +41,8 @@ body {
 .producto:hover, .flecha:hover{
     transform: scale(1.1);
 }
-html{
-    font-family: 'Sans Serif';
-    src: url('./delta/Delta.ttf') format('Delta');
-    font-style: normal;
-    font-weight: normal;
+*{
+    font-family: 'MiFuente';
 }
 .recomendadas, .ofertas, .mejorVotadas{
     float: left;
@@ -59,4 +56,10 @@ html{
 
 .recomendadas, .ofertas, .mejorVotadas{
     margin-left: 20px;
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('./bebas_neue/BebasNeue-Regular.woff2') format('woff2'), /* Formato WOFF2 para navegadores modernos */
+         url('./bebas_neue/BebasNeue-Regular.woff') format('woff'); /* Formato WOFF para compatibilidad */
 }
