@@ -1,7 +1,12 @@
 body {
     margin: 0;
-    background-color: #d8d8d8;
+    background-color: #ebebeb;
 }
+
+.body{
+    margin-left: 20px;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -20,7 +25,7 @@ body {
     color: black;
 }
 .user{
-    padding-left: 50%;
+    padding-left: 43%;
     padding-right: 50%;
 }
 .favoritas>a{
@@ -32,4 +37,14 @@ body {
 
 .favoritas>a>img:hover{
     transform: scale(1.1);
+}
+
+.userImage{
+    width: 250px;
+    height: 250px;
+}
+
+.user h3{
+    padding-left: 60%;
+    padding-right: 50%;
 }
