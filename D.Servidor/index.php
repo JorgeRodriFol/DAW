@@ -9,5 +9,6 @@
     <p>Ejercicios:</p>
     <a href="./EjercicioParejas/ejercicioParejas.php">Ejercicio de parejas</a>
     <a href="./JuegosDados/indexDuelos.php">Ejercicio de duelo</a>
+    <a href="./EjerciciosBucles/indexBucles.php">Ejercicios de bucles</a>
 </body>
 </html>
