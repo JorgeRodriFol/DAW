@@ -9,6 +9,7 @@
     <ul>
         <li><a href="./Ejercicio1/ejercicio1.php">Circulos Rotatorios</a></li>
         <li><a href="./Ejercicio1/ejerciciodaos.php">10 Dados</a></li>
+        <li><a href="./Diana/diana.php">Diana</a></li>
     </ul>
 </body>
 </html>
