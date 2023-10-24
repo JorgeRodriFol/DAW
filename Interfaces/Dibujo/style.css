@@ -1,0 +1,80 @@
+.cabeza{
+    box-sizing: border-box;
+    background-color: rgb(145, 95, 192);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+    position: relative;
+    left: 185px;
+    top: 15px;
+}
+
+.cuerpo{
+    box-sizing: border-box;
+    background-color: rgb(145, 95, 192);
+    clip-path: ellipse(30% 50%);
+    width: 150px;
+    height: 300px;
+    z-index: 5;
+    position: relative;
+    left: 160px;
+}
+
+.ala-left-top{
+    box-sizing: border-box;
+    background-color: rgb(197, 255, 219);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+    position: relative;
+    top: -400px;
+}
+
+.ala-left-bottom{
+    box-sizing: border-box;
+    background-color: rgb(197, 255, 219);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+    position: relative;
+    top: -450px;
+}
+
+.ala-right-top{
+    box-sizing: border-box;
+    background-color: rgb(197, 255, 219);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+    position: relative;
+    top: -900px;
+    left: 220px;
+}
+
+.ala-right-bottom{
+    box-sizing: border-box;
+    background-color: rgb(197, 255, 219);
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+    position: relative;
+    top: -950px;
+    left: 220px;
+}
+
+.interior{
+    background-color: rgb(150, 0, 0);
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+    z-index: 4;
+}
