@@ -7,29 +7,31 @@
     
 </head>
 <body>
-    <?php
-    $tamano = 600;
-    $numDisparos = rand(1,10);
-    echo("<svg width='1000' height='1000'>");
-        for($indice = 1; $indice <= 10; $indice++){
-            if($indice%2 == 0){
-                echo("<div style='background-color:white;border-radius:50%; zindex:$indice; height:".$tamano."px; width:".$tamano."px; padding:28px; text-align: center;'>");
-            }else{
-                echo("<div style='background-color:red;border-radius:50%; zindex:$indice; height:".$tamano."px; width:".$tamano."px; padding:28px; text-align: center;'>");
-            }
-            
-            $tamano -=60;
-        }
-        for($indice = 10; $indice >= 1; $indice--){
-            echo("<p'>$indice</p>") ;
-            echo("</div>");
-        }
+<?php
+echo("<svg width='420' height='420' viewBox='-210 -210 420 420'>");
 
-        for($indice = 0; $indice < $numDisparos; $indice++){
-            echo("<circle cx='".rand(28,600)."' cy='".rand(28,600)."' r='5' stroke='' fill='black' />") ;
-        }
+for ($i = 0; $i < 5; $i++) {
+    echo("<circle cx='0' cy='0' r='" . (200 - 40 * $i) . "' fill='red' />");
+    echo("<circle cx='0' cy='0' r='" . (200 - 40 * $i - 20) . "' fill='#ddd' />");
+}
 
-        echo("</svg>");
-    ?>
+for ($i = 0; $i < 10; $i++) {
+    echo("<text x='0' y='" . (195 - 20 * $i) . "' text-anchor='middle' font-size='13'>" . ($i + 1) . "</text>");
+}
+
+$puntos = 0;
+$disparos = rand(1, 10);
+for ($i = 0; $i < $disparos; $i++) {
+    $x = rand(-200, 200);
+    $y = rand(-200, 200);
+    $puntos += ((10 - intdiv(sqrt($x ** 2 + $y ** 2), 20)) > 0 ? (10 - intdiv(sqrt($x ** 2 + $y ** 2), 20)) : 0);
+    echo("<circle cx='$x' cy='$y' r='5' stroke='' fill='black' />\n");
+}
+
+echo("</svg>");
+echo("<h2>Estadísticas</h2>");
+echo("<p>Número de disparos: $disparos.</p>");
+echo("<p>Puntuación obtenida: $puntos.</p>");
+?>
 </body>
 </html>
