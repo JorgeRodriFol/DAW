@@ -28,3 +28,24 @@ body{
     width: 4em;
     height: 2em;
 }
+
+table{
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    border: black solid 0.1em;
+    border-collapse: collapse;
+    background-color: rgb(255, 217, 182);
+}
+td, tr{
+    border: black solid 0.1em;
+}
+
+.otroMes{
+    color: transparent;
+}
+
+.diaActual{
+    border-width: 0.2em;
+    background-color: rgb(190, 190, 190);
+}
