@@ -92,18 +92,22 @@ body {
 }
 
 .tallas{
-  border-style: solid;
-  border-radius: 5px;
-  border-width: 3px;
-  margin-right: 47%;
-  background-color: #9c9c9c;
+  width: 5em;
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.talla{
-  padding-left: 5px;
-  padding-right: 5px;
-  border-left-style: solid;
-  border-left-width: 1px;
+.tallas>div{
+  color: white;
+  background-color: black;
+  margin: 5em;
+}
+
+.tallas>div:c{
+  color: white;
+  background-color: black;
 }
 
 input[type="radio"]:checked +.talla{
