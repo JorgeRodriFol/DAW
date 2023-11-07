@@ -1,3 +1,4 @@
+document.oncontextmenu = false;
 var tablero = [];
 var rows = 8;
 var cols = 8;
@@ -60,12 +61,17 @@ function pintarTablero() {
   for (let i = 0; i < tablero.length; i++) {
     let fila = document.createElement("tr");
     for (let j = 0; j < tablero[i].length; ++j) {
-      tablero[i][j].addEventListener("click", function () {
-        if (tablero[i][j].classList == -1) {
-          alert("Explotastes");
-          location.reload();
-        } else {
-          tablero[i][j].textContent = tablero[i][j].classList;
+      tablero[i][j].addEventListener("mousedown", function () {
+        if (event.which === 1) {
+          if (tablero[i][j].classList == -1) {
+            alert("Explotastes");
+            location.reload();
+          } else {
+            tablero[i][j].textContent = tablero[i][j].classList;
+          }
+        } else if (event.which === 3) {
+          event.preventDefault();
+          tablero[i][j].textContent = "X";
         }
       });
       fila.appendChild(tablero[i][j]);
