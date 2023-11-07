@@ -1,4 +1,3 @@
-document.oncontextmenu = false;
 var tablero = [];
 var rows = 8;
 var cols = 8;
