@@ -55,31 +55,8 @@ function minasCercanas(row, col) {
   return count;
 }
 
-/*function pintarTablero() {
-  let tabla = document.querySelector(".tablero");
-  for (let i = 0; i < tablero.length; i++) {
-    let fila = document.createElement("tr");
-    for (let j = 0; j < tablero[i].length; ++j) {
-      tablero[i][j].addEventListener("mousedown", function () {
-        if (event.which === 1) {
-          if (tablero[i][j].classList == -1) {
-            alert("Explotastes");
-            location.reload();
-          } else {
-            tablero[i][j].textContent = tablero[i][j].classList;
-          }
-        } else if (event.which === 3) {
-          event.preventDefault();
-          tablero[i][j].textContent = "X";
-        }
-      });
-      fila.appendChild(tablero[i][j]);
-    }
-    tabla.appendChild(fila);
-  }
-}*/
-
 function pintarTablero() {
+  
   let tabla = document.querySelector(".tablero");
   for (let i = 0; i < tablero.length; i++) {
     let fila = document.createElement("tr");
@@ -102,7 +79,6 @@ function pintarTablero() {
     tabla.appendChild(fila);
   }
 }
-
 function mostrarCasillasAlrededor(row, col) {
   if (tablero[row][col].classList == 0) {
     for (let i = -1; i <= 1; i++) {
@@ -110,7 +86,8 @@ function mostrarCasillasAlrededor(row, col) {
         const newRow = row + i;
         const newCol = col + j;
 
-        if (newRow >= 0 && newRow < filas && newCol >= 0 && newCol < columnas && tablero[newRow][newCol].classList == 0) {
+        if (newRow >= 0 && newRow < filas && newCol >= 0 && newCol < columnas && tablero[newRow][newCol].classList >= 0) {
+          
           tablero[newRow][newCol].textContent = tablero[newRow][newCol].classList;
         }
       }
