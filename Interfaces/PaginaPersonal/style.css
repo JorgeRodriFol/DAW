@@ -7,13 +7,10 @@ body {
   height: 5em;
 }
 
-div {
-  border: solid black 0.1em;
-}
-
 .body {
   height: 100%;
   width: 100%;
+  background-color: rgb(255, 238, 217);
 }
 
 .personal {
@@ -24,6 +21,7 @@ div {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  background-color: rgb(235, 235, 235);
 }
 
 .imagen {
@@ -36,14 +34,52 @@ div {
   height: 100%;
 }
 
+.personal:hover,
+.personal > div:hover {
+  box-shadow: 0px 10px 13px -7px #000000, 0px 22px 21px 5px rgba(0, 0, 0, 0.46);
+}
+
 .info {
   grid-area: 1 / 2 / 2 / 3;
 }
 
-li {
+.frase {
+  background-image: url(./fondo.jpg);
+  background-size: 100% 10em;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frase > h3 {
+  font-family: "Frase";
+}
+
+@font-face {
+  font-family: "Frase";
+  src: url("./adelia_3/adelia.ttf");
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+}
+
+.proyectos > ul > li {
   list-style: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.proyecto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: fit-content;
 }
 
 .proyecto > img {
@@ -51,6 +87,61 @@ li {
   width: auto;
 }
 
-.proyecto > p {
-  text-align: center;
+.descripcion {
+  border: solid black 0.1em;
+  border-radius: 10px;
+  margin-left: 0.5em;
+  height: 169px;
+  padding: 5px;
+  background-color: rgb(255, 249, 243);
+}
+
+.descripcion:hover,
+.proyecto > img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 22px 21px 5px rgba(0, 0, 0, 0.46);
+}
+
+.habilidades {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.habilidades > div > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.habilidades > div > ul > li {
+  list-style: none;
+  border-radius: 3px;
+  background-color: rgb(57, 167, 255);
+  color: white;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.contacto {
+  background-color: rgb(8, 10, 32);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.correo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.correo > img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.correo > p {
+  margin-left: 10px;
 }
