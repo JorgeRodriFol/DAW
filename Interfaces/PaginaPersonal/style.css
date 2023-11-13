@@ -8,12 +8,6 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  width: 100vw;
-}
-
-.menu:not(:hover) {
-  top: -70px;
 }
 
 .menu > a > h3 {
@@ -186,4 +180,10 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    display: block;
+  }
 }
