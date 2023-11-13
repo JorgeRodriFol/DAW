@@ -5,6 +5,30 @@ body {
 .menu {
   background-color: #333;
   height: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+}
+
+.menu:not(:hover) {
+  top: -70px;
+}
+
+.menu > a > h3 {
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.menu a :hover {
+  background-color: white;
+  color: black;
+}
+
+.menu > a {
+  text-decoration: none;
 }
 
 .body {
@@ -13,7 +37,7 @@ body {
   background-color: rgb(255, 238, 217);
 }
 
-.personal {
+#personal {
   height: auto;
   width: 100%;
   display: grid;
@@ -34,8 +58,8 @@ body {
   height: 100%;
 }
 
-.personal:hover,
-.personal > div:hover {
+#personal:hover,
+#personal > div:hover {
   box-shadow: 0px 10px 13px -7px #000000, 0px 22px 21px 5px rgba(0, 0, 0, 0.46);
 }
 
@@ -66,7 +90,7 @@ h2 {
   text-align: center;
 }
 
-.proyectos > ul > li {
+#proyectos > ul > li {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -102,19 +126,19 @@ h2 {
   box-shadow: 0px 10px 13px -7px #000000, 0px 22px 21px 5px rgba(0, 0, 0, 0.46);
 }
 
-.habilidades {
+#habilidades {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: aliceblue;
 }
 
-.habilidades > div > ul {
+#habilidades > div > ul {
   display: flex;
   justify-content: space-between;
 }
 
-.habilidades > div > ul > li {
+#habilidades > div > ul > li {
   list-style: none;
   border-radius: 3px;
   background-color: rgb(57, 167, 255);
@@ -123,25 +147,43 @@ h2 {
   padding: 5px;
 }
 
-.contacto {
+#contacto {
   background-color: rgb(8, 10, 32);
   color: aliceblue;
   display: flex;
   justify-content: center;
 }
 
-.correo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+#contacto > ul > li {
+  list-style: none;
 }
 
-.correo > img {
+#contacto > ul > li > div > img {
   height: 50px;
   margin-right: 10px;
 }
 
-.correo > p {
+#contacto > ul > li > div > p {
   margin-left: 10px;
+}
+
+.correo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
