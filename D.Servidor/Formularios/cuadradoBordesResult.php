@@ -12,7 +12,7 @@
         <?php
         $size = $_GET["size"];
         $border = $_GET["border"];
-        print "<rect width='$size' height='$size' style='fill:rgb(0,0,255);stroke-width:$border;stroke:rgb(0,0,0)' />";
+        print "<rect x='50' y='50' width='$size' height='$size' style='fill:rgb(0,0,255);stroke-width:$border;stroke:rgb(0,0,0)' />";
         ?>
     </svg>
     <a href="cuadradoBordes.php">Volver a la pagina anterior</a>
