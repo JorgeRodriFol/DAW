@@ -28,7 +28,6 @@ function inicializarTablero() {
     }
   }
 
-  let count = 0;
   for (let i = 0; i < tablero.length; ++i) {
     for (let j = 0; j < tablero[i].length; j++) {
       if (tablero[i][j].classList == 0) {
@@ -38,15 +37,15 @@ function inicializarTablero() {
   }
 }
 
-function minasCercanas(row, col) {
+function minasCercanas(fila, columna) {
   let count = 0;
   for (let i = -1; i <= 1; i++) {
     for (let j = -1; j <= 1; j++) {
-      const newRow = row + i;
-      const newCol = col + j;
+      const nuevaFila = fila + i;
+      const nuevaColumna = columna + j;
 
-      if (newRow >= 0 && newRow < filas && newCol >= 0 && newCol < columnas) {
-        if (tablero[newRow][newCol].classList == -1) {
+      if (nuevaFila >= 0 && nuevaFila < filas && nuevaColumna >= 0 && nuevaColumna < columnas) {
+        if (tablero[nuevaFila][nuevaColumna].classList == -1) {
           count++;
         }
       }
@@ -56,7 +55,6 @@ function minasCercanas(row, col) {
 }
 
 function pintarTablero() {
-  
   let tabla = document.querySelector(".tablero");
   for (let i = 0; i < tablero.length; i++) {
     let fila = document.createElement("tr");
@@ -79,20 +77,26 @@ function pintarTablero() {
     tabla.appendChild(fila);
   }
 }
-function mostrarCasillasAlrededor(row, col) {
-  if (tablero[row][col].classList == 0) {
+function mostrarCasillasAlrededor(fila, columna) {
+  if (tablero[fila][columna].classList == 0) {
     for (let i = -1; i <= 1; i++) {
       for (let j = -1; j <= 1; j++) {
-        const newRow = row + i;
-        const newCol = col + j;
+        const nuevaFila = fila + i;
+        const nuevaColumna = columna + j;
 
-        if (newRow >= 0 && newRow < filas && newCol >= 0 && newCol < columnas && tablero[newRow][newCol].classList >= 0) {
-          
-          tablero[newRow][newCol].textContent = tablero[newRow][newCol].classList;
+        if (
+          nuevaFila >= 0 &&
+          nuevaFila < filas &&
+          nuevaColumna >= 0 &&
+          nuevaColumna < columnas &&
+          tablero[nuevaFila][nuevaColumna].classList >= 0
+        ) {
+          tablero[nuevaFila][nuevaColumna].textContent =
+            tablero[nuevaFila][nuevaColumna].classList;
         }
       }
     }
   } else {
-    tablero[row][col].textContent = tablero[row][col].classList;
+    tablero[fila][columna].textContent = tablero[fila][columna].classList;
   }
 }
