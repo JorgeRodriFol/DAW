@@ -93,10 +93,12 @@ function mostrarCasillasAlrededor(fila, columna) {
           nuevaFila < filas &&
           nuevaColumna >= 0 &&
           nuevaColumna < columnas &&
-          tablero[nuevaFila][nuevaColumna].classList >= 0
+          tablero[nuevaFila][nuevaColumna].classList >= 0 &&
+          tablero[nuevaFila][nuevaColumna].trim() === ""
         ) {
           tablero[nuevaFila][nuevaColumna].textContent =
             tablero[nuevaFila][nuevaColumna].classList;
+          mostrarCasillasAlrededor(nuevaFila, nuevaColumna);
         }
       }
     }
