@@ -12,7 +12,7 @@
         <li><a href="./nombre.php">Ejercicio 1.</a></li>
         <li><a href="./cuadrado.php">Ejercicio 2.</a></li>
         <li><a href="./cuadradoBordes.php">Ejercicio 3.</a></li>
-        <li><a href=""></a></li>
+        <li><a href="./pedidos.php">Pedido</a></li>
         <li><a href=""></a></li>
         <li><a href=""></a></li>
         <li><a href=""></a></li>

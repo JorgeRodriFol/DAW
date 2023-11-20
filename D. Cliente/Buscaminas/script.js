@@ -7,7 +7,6 @@ pintarTablero();
 
 function inicializarTablero() {
   for (let i = 0; i < filas; i++) {
-    let tr = document.createElement("tr");
     const fila = [];
     for (let j = 0; j < columnas; j++) {
       let casilla = document.createElement("td");
@@ -44,7 +43,12 @@ function minasCercanas(fila, columna) {
       const nuevaFila = fila + i;
       const nuevaColumna = columna + j;
 
-      if (nuevaFila >= 0 && nuevaFila < filas && nuevaColumna >= 0 && nuevaColumna < columnas) {
+      if (
+        nuevaFila >= 0 &&
+        nuevaFila < filas &&
+        nuevaColumna >= 0 &&
+        nuevaColumna < columnas
+      ) {
         if (tablero[nuevaFila][nuevaColumna].classList == -1) {
           count++;
         }
