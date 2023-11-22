@@ -1,0 +1,405 @@
+body {
+  margin: 0;
+  background-color: rgb(255, 238, 217);
+}
+
+.menu {
+  background-color: #333;
+  height: 5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.menu > a > h3 {
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+.menu a :hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.menu > a {
+  text-decoration: none;
+}
+
+.body {
+  height: 100%;
+  width: 100vw;
+}
+
+#personal {
+  height: auto;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: rgb(235, 235, 235);
+}
+
+.imagen {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.perfil {
+  width: 100%;
+  height: 100%;
+}
+
+#personal:hover,
+#personal > div:hover {
+  box-shadow: 0px 10px 13px -7px #000000, 0px 22px 21px 5px rgba(0, 0, 0, 0.46);
+}
+
+.info {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
+  padding: 10px;
+}
+
+.frase {
+  background-image: url(./fondo.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frase > h3 {
+  font-family: "Frase";
+  background-color: rgb(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: "Frase";
+  src: url("./adelia_3/adelia.ttf");
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+}
+
+#proyectos {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+#proyectos > div > h3 {
+  text-align: center;
+}
+
+.proyecto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: fit-content;
+}
+
+.proyecto > img {
+  height: 176px;
+  width: auto;
+}
+
+.descripcion {
+  border: solid black 0.1em;
+  border-radius: 10px;
+  margin-left: 0.5em;
+  height: 169px;
+  padding: 5px;
+  background-color: rgb(255, 249, 243);
+  width: 250px;
+}
+
+.descripcion:hover,
+.proyecto > img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 22px 21px 5px rgba(0, 0, 0, 0.46);
+}
+
+#habilidades {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+#habilidades > div > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#habilidades > div > ul > li {
+  border-radius: 3px;
+  background-color: rgb(57, 167, 255);
+  color: white;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+#habilidades > div > ul > li:hover {
+  background-color: rgb(42, 145, 230);
+}
+
+#contacto {
+  background-color: rgb(8, 10, 32);
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+}
+
+#contacto > ul > li > div > img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+#contacto > ul > li > div > p {
+  margin-left: 10px;
+}
+
+.correo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 414px) {
+  #personal:hover,
+  #personal > div:hover {
+    box-shadow: none;
+  }
+  .descripcion:hover,
+  .proyecto > img:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  body {
+    width: 96vw;
+    overflow-x: hidden;
+  }
+
+  .menu {
+    background-color: #333;
+    height: 5em;
+    width: 96vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+  }
+
+  .menu > a > h3 {
+    color: white;
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .menu > a {
+    text-decoration: none;
+  }
+
+  .body {
+    height: 100%;
+    width: 100%;
+  }
+
+  #personal {
+    height: auto;
+    width: 96vw;
+    display: block;
+    background-color: rgb(235, 235, 235);
+  }
+
+  .imagen {
+    width: 96vw;
+    height: auto;
+  }
+
+  .perfil {
+    width: 100%;
+    height: 100%;
+  }
+
+  .info {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100vw;
+  }
+
+  .info > h1 {
+    font-size: 20px;
+  }
+
+  .frase {
+    background-image: url(./fondo.jpg);
+    background-size: 100% 10em;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frase > h3 {
+    font-family: "Frase";
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  @font-face {
+    font-family: "Frase";
+    src: url("./adelia_3/adelia.ttf");
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #proyectos {
+    display: block;
+    width: 90%;
+  }
+
+  #proyectos > ul {
+    padding-left: 0px;
+  }
+
+  #proyectos > ul > li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .proyecto {
+    display: block;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .proyecto > img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .descripcion {
+    border: solid black 0.1em;
+    border-radius: 10px;
+    height: 169px;
+    padding: 5px;
+    background-color: rgb(255, 249, 243);
+  }
+
+  #habilidades {
+    display: block;
+    align-items: center;
+    background-color: aliceblue;
+    width: 100vw;
+    height: auto;
+  }
+
+  #habilidades > div > ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  #habilidades > div > ul > li {
+    list-style: none;
+    border-radius: 3px;
+    background-color: rgb(57, 167, 255);
+    color: white;
+    margin-left: 5px;
+    padding: 5px;
+  }
+
+  #contacto {
+    background-color: rgb(8, 10, 32);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  #contacto > ul > li {
+    list-style: none;
+  }
+
+  #contacto > ul > li > div > img {
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  #contacto > ul > li > div > p {
+    margin-left: 10px;
+  }
+
+  .correo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  #personal:hover,
+  #personal > div:hover {
+    box-shadow: none;
+  }
+  .descripcion:hover,
+  .proyecto > img:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

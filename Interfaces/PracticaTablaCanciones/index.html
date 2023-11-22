@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th colspan="4">Top 10. Las mejores canciones del momento.</th>
+            </tr>
+            <tr>
+                <th>Puesto</th>
+                <th>Grupo</th>
+                <th>Canción</th>
+                <th>Votos</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td rowspan="2">Queen</td>
+                <td>Bohemian Rhapsody</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Don't stop me now</td>
+                <td>190</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Zahara</td>
+                <td>Con las ganas</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Izal</td>
+                <td>Pequeña Revolución</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Vetusta Morla</td>
+                <td>Días raros</td>
+                <td rowspan="2">80</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Rozalen</td>
+                <td>Girasoles</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Dua lipa</td>
+                <td>Physical</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Amaral</td>
+                <td>Como hablar</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Pink</td>
+                <td>F**kin'Perfect</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>El kanka</td>
+                <td>Que bello es vivir</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total de votos</td>
+                <td>XXXX</td>
+            </tr>
+        </table>
+    </div>
+    <div id="snap-section" class="form-container">
+        <form>
+            <div class="personal">
+                <h3>Datos personales.</h3>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="surname">Apellidos:</label>
+                <input type="text" id="surname" name="surname"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="age">Edad (18-100):</label>
+                <input type="number" id="age" name="age" min="18" max="100"><br>
+                <label for="phone">Numero de telefono:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+                <label for="image">Imagen reciente:<br><br></label>
+                <input type="file" id="image" name="image" accept="image/*" onchange="previewImage(event, '#imgPreview')"><br>
+            </div>
+            <div class="cancion">
+                <h3>Datos de la cancion.</h3>
+                <label for="groupName">Nombre del grupo:</label>
+                <input type="text" id="groupName" name="groupName"><br>
+                <label for="songName">Nombre de la cancion:</label>
+                <input type="text" id="songName" name="songName"><br>
+                <label for="albumName">Albúm en el que aparece la canción:</label>
+                <input type="text" id="albumName" name="albumName"><br>
+                <label for="dateDisc">Fecha de publicación del disco:</label>
+                <input type="date" id="dateDisc" name="dateDisc"><br>
+                <p>Estilo musical (Seleccione uno o varios):</p>
+                <input type="checkbox" id="pop" name="pop" value="pop">
+                <label for="pop">Pop</label><br>
+                <input type="checkbox" id="español" name="español" value="español">
+                <label for="español">Español</label><br>
+                <input type="checkbox" id="flamenco" name="flamenco" value="flamenco">
+                <label for="flamenco">Flamenco</label><br>
+                <input type="checkbox" id="rock" name="rock" value="rock">
+                <label for="rock">Rock</label><br>
+                <input type="checkbox" id="metal" name="metal" value="metal">
+                <label for="metal">Metal</label><br>
+                <input type="checkbox" id="reggaeton" name="reggaeton" value="reggaeton">
+                <label for="reggaeton">Reggaeton</label><br><br>
+                <textarea name="textarea" rows="10" cols="50">Explicacion de tu eleccion</textarea>
+            </div>
+            <h3>Aceptar las condiciones</h3>
+            <p>Donde ha conocido la web:</p>
+            <input type="checkbox" name="friend" id="friend" value="friend">
+            <label for="friend">Amigos</label><br>
+            <input type="checkbox" name="cuarenta" id="cuarenta" value="cuarenta">
+            <img id="cuarentaPrincipales" for="cuarenta" src="./Imagenes/cuarentaPrincipales.png" alt="Cuarenta Principales"><br><br>
+            <input type="checkbox" name="google" id="google" value="google">
+            <img id="googleImg" for="google" src="./Imagenes/google.png" alt="Google"><br><br>
+            <input type="checkbox" name="otros" id="otros" value="otros">
+            <label for="otros">Otros</label><br>
+            <label for="terminos">Acepto los terminos de privacidad</label>
+            <input type="checkbox" name="terminos" id="terminos" value="terminos"><br>
+            <p>Desea inscribirse en nuestro newsletter:</p>
+            <input type="radio" id="si" name="newsletter" value="si">
+            <label for="si">Si</label><br>
+            <input type="radio" id="no" name="newsletter" value="no">
+            <label for="no">No</label><br><br>
+            <div id="buttons">
+                <input id="reset" type="reset" value="Reset">
+                <input id="submit" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
