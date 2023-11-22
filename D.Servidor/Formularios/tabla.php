@@ -49,7 +49,11 @@
                 echo $cantidadA;
                 ?>
             </td>
-            <td>X</td>
+            <td>
+                <?php
+                echo $cantidadA * 5.99 . "€";
+                ?>
+            </td>
         </tr>
         <tr>
             <td>B</td>
@@ -75,12 +79,39 @@
             </td>
             <td>
                 <?php
-                echo $cantidadC;
+                echo $cantidadC * 19.99 . "€";
+                ?>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <?php
+                echo "Descuento (" . $descuento . "%)";
                 ?>
             </td>
             <td>
                 <?php
-                echo $cantidadC * 12.49 . "€";
+                $total = $cantidadA + $cantidadB + $cantidadC;
+                echo $total * ($descuento / 100) . "€";
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>IVA (20%)</td>
+            <td>
+                <?php
+                echo $total * 0.2 . "€";
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>TOTAL</td>
+            <td>
+                <?php
+                echo $total - ($total * ($descuento / 100)) + ($total * 0.2) . "€";
                 ?>
             </td>
         </tr>
