@@ -20,6 +20,8 @@
     echo "<svg width='110' heigth='100'>
             <rect width='$longitud' height='5' style='fill:rgb(0,0,0)' />
         </svg>";
+
+    echo "HOLA";
     ?>
 </body>
 
