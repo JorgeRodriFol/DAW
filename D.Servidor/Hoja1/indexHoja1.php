@@ -15,6 +15,7 @@
         <li><a href="./Ej3/ej3.php">Ejercicio 3</a></li>
         <li><a href="./Ej4/ej4.php">Ejercicio 4</a></li>
         <li><a href="./Ej5/ej5.php">Ejercicio 5</a></li>
+        <li><a href="./Ej6/ej6.php">Ejercicio 6</a></li>
     </ul>
 </body>
 
