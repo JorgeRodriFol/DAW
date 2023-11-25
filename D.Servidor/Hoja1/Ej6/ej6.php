@@ -16,8 +16,8 @@ con un radio entre 50 y 150 píxeles, al azar-->
 
     echo "<p>Estos circulos tienen $radio px de radio. Actualice la página para mostrar cuatro nuevos circulos</p>";
     echo "<svg heigth='200' width='1000'>";
-    for($i = 1; $i <= 4; $i++){
-        echo "<circle cx='".$radio*$i."' cy='$radio' r='$radio' fill='rgb(".rand(0,255).",".rand(0,255).",".rand(0,255).")'>";
+    for($i = 1; $i <= 7; $i+=2){
+        echo "<circle cx='".$radio*$i."' cy='$radio' r='$radio' fill='rgb(".rand(0,255).",".rand(0,255).",".rand(0,255).")'/>";
     }
     
     echo "</svg>";
