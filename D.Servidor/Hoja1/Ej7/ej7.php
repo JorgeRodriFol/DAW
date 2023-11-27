@@ -23,9 +23,7 @@ y 6, al azar, y coloque la ficha en la posición correspondiente.-->
     for ($i = 1; $i <= 6; $i++) {
         echo "<div style='heigth:80px; width:80px; border:0.1em black solid; text-align:center'>";
         if ($i == $tirada) {
-            echo "<svg width='50' heigth='50'>";
-            echo "<circle cx='$posicion' cy='40' r='25' fill='red'/>";
-            echo "</svg>";
+            echo "<div></div>";
         } else {
             echo "<h1>$i</h1>";
         }
