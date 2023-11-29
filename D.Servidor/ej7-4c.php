@@ -42,38 +42,45 @@ if (isset($_POST['reiniciar'])) {
 
 <body>
     <h1>Estado del juego</h1>
-    <p>Resultado actual:
-        <?php echo $_SESSION['cara_actual']; ?>
-    </p>
-    <p>Veces que ha salido la cara A:
-        <?php echo $_SESSION['contador_A']; ?>
-    </p>
-    <p>Veces que ha salido la cara B:
-        <?php echo $_SESSION['contador_B']; ?>
-    </p>
-    <p>Expresión del jugador A:
-        <?php if ($_SESSION['contador_A'] > $_SESSION['contador_B']) {
-            echo '&#128568;';
-        } elseif ($_SESSION['contador_A'] == $_SESSION['contador_B']) {
-            echo '&#128572;';
-        } else {
-            echo '&#128576;';
-        } ?>
-    </p>
-    <p>Expresión del jugador B:
-        <?php if ($_SESSION['contador_A'] < $_SESSION['contador_B']) {
-            echo '&#128585;';
-        } elseif ($_SESSION['contador_A'] == $_SESSION['contador_B']) {
-            echo '&#128586;';
-        } else {
-            echo '&#128584;';
-        } ?>
-    </p>
-
+    <p>Haz click en los botones:</p>
     <form method="post">
         <input type="submit" name="lanzar" value="Lanzar Moneda">
         <input type="submit" name="reiniciar" value="Reiniciar Juego">
     </form>
+
+    <div class="jugadores">
+        <div>
+            <h3>Jugador A</h3>
+            <h1>
+                <?php echo $_SESSION['contador_A']; ?>
+                <?php if ($_SESSION['contador_A'] > $_SESSION['contador_B']) {
+                    echo '&#128568;';
+                } elseif ($_SESSION['contador_A'] == $_SESSION['contador_B']) {
+                    echo '&#128572;';
+                } else {
+                    echo '&#128576;';
+                } ?>
+            </h1>
+        </div>
+        <div>
+            <?php echo "<h1>" . $_SESSION['cara_actual'] . "</h1>"; ?>
+        </div>
+        <div>
+            <h3>Jugador B</h3>
+            <h1>
+                <?php echo $_SESSION['contador_B']; ?>
+            </h1>
+            <h1>
+                <?php if ($_SESSION['contador_A'] < $_SESSION['contador_B']) {
+                    echo '&#128585;';
+                } elseif ($_SESSION['contador_A'] == $_SESSION['contador_B']) {
+                    echo '&#128586;';
+                } else {
+                    echo '&#128584;';
+                } ?>
+            </h1>
+        </div>
+    </div>
 </body>
 
 </html>
