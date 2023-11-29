@@ -12,6 +12,7 @@
     <ul>
         <li><a href="./Hoja1/indexHoja1.php">Hoja 1</a></li>
         <li><a href="./ejemploFormArray.php">ejemploFormArray</a></li>
+        <li><a href="./ej7-4c.php">ejemploFormArray</a></li>
     </ul>
 </body>
 
