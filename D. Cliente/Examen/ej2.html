@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const pan = {
+        peso: 350,
+        cereal: "trigo",
+        integral: true,
+        precio: 1.2,
+
+        getInfo: function () {
+          if (pan.integral) {
+            return (
+              "Este pan tiene un peso de " +
+              pan.peso +
+              "g, es de " +
+              pan.cereal +
+              " integral y vale " +
+              pan.precio +
+              "€"
+            );
+          } else {
+            return (
+              "Este pan tiene un peso de " +
+              pan.peso +
+              "g, es de " +
+              pan.cereal +
+              " no integral y vale " +
+              pan.precio +
+              "€"
+            );
+          }
+        },
+      };
+
+      console.log(pan.getInfo());
+    </script>
+  </body>
+</html>

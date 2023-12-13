@@ -1,36 +1,3 @@
-<?php
-session_start();
-
-if (!isset($_SESSION['cara_actual'])) {
-    $_SESSION['cara_actual'] = '';
-    $_SESSION['contador_A'] = 0;
-    $_SESSION['contador_B'] = 0;
-}
-
-// Comprobar si se ha lanzado la moneda
-if (isset($_POST['lanzar'])) {
-    $caras = ['A', 'B'];
-    $cara_lanzada = $caras[array_rand($caras)];
-
-    $_SESSION['cara_actual'] = $cara_lanzada;
-
-    if ($cara_lanzada == 'A') {
-        $_SESSION['contador_A']++;
-    } else {
-        $_SESSION['contador_B']++;
-    }
-}
-
-// Comprobar si se ha reiniciado el juego
-if (isset($_POST['reiniciar'])) {
-    session_unset();
-    session_destroy();
-    $_SESSION['cara_actual'] = '';
-    $_SESSION['contador_A'] = 0;
-    $_SESSION['contador_B'] = 0;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -41,6 +8,38 @@ if (isset($_POST['reiniciar'])) {
 </head>
 
 <body>
+    <?php
+    session_start();
+
+    if (!isset($_SESSION['cara_actual'])) {
+        $_SESSION['cara_actual'] = '';
+        $_SESSION['contador_A'] = 0;
+        $_SESSION['contador_B'] = 0;
+    }
+
+    // Comprobar si se ha lanzado la moneda
+    if (isset($_POST['lanzar'])) {
+        $caras = ['A', 'B'];
+        $cara_lanzada = $caras[array_rand($caras)];
+
+        $_SESSION['cara_actual'] = $cara_lanzada;
+
+        if ($cara_lanzada == 'A') {
+            $_SESSION['contador_A']++;
+        } else {
+            $_SESSION['contador_B']++;
+        }
+    }
+
+    // Comprobar si se ha reiniciado el juego
+    if (isset($_POST['reiniciar'])) {
+        session_unset();
+        session_destroy();
+        $_SESSION['cara_actual'] = '';
+        $_SESSION['contador_A'] = 0;
+        $_SESSION['contador_B'] = 0;
+    }
+    ?>
     <h1>Estado del juego</h1>
     <p>Haz click en los botones:</p>
     <form method="post">

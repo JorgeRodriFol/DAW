@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="texto"></div>
+    <script>
+      let div = document.getElementById("texto");
+      function union(cad1, cad2) {
+        let cadUnion = cad1 + cad2;
+        return cadUnion;
+      }
+
+      let cadena1 = "jjjjjjjjjjjjjjjjjjjjjjjjjj";
+      let cadena2 = "aaaaaaaaaaaaaaaaaaaaaaa";
+      let cadenaUnion = union(cadena1, cadena2);
+      if (cadena1.length > cadena2.length) {
+        div.innerHTML ="Cadena mas larga: " + cadena1 +
+          "<br>Longitud de cadena 1: " +cadena1.length +
+          "<br>Longitud de cadena2: " + cadena2.length +
+          "<br>Longitud de las dos cadenas unidas: " + cadenaUnion.length;
+      } else {
+        div.innerHTML ="Cadena mas larga: " + cadena2 +
+          "<br>Longitud de cadena 1: " +cadena1.length +
+          "<br>Longitud de cadena2: " + cadena2.length +
+          "<br>Longitud de las dos cadenas unidas: " + cadenaUnion.length;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numero = parseInt(
+        prompt("Introduzca un numero del 0 al 10, o -1 para acabar")
+      );
+      const listaNumeros = [];
+      let contador = 0;
+      while (numero != -1) {
+        if (numero < 0 || numero > 10 || isNaN(numero)) {
+          alert("Introduzca un numero del 0 al 10, o -1 para acabar");
+        } else {
+          listaNumeros[contador] = numero;
+          contador++;
+        }
+        numero = parseInt(
+          prompt("Introduzca un numero del 0 al 10, o -1 para acabar")
+        );
+      }
+
+      let suma = 0;
+
+      for (let i = 0; i < listaNumeros.length; i++) {
+        suma += listaNumeros[i];
+      }
+
+      alert("La media es: " + suma / listaNumeros.length);
+    </script>
+  </body>
+</html>

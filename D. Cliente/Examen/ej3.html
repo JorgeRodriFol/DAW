@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let texto = prompt("Introduzca una fecha en el formato dia:mes");
+      let separacion = texto.split(":");
+      let anio = new Date().getFullYear();
+      let dia = parseInt(separacion[0]);
+      let mes = parseInt(separacion[1]) - 1;
+      let fecha1 = new Date(anio, mes, dia);
+
+      texto = prompt("Introduzca otra fecha en el formato dia:mes");
+      separacion = texto.split(":");
+      dia = parseInt(separacion[0]);
+      mes = parseInt(separacion[1]) - 1;
+      let fecha2 = new Date(anio, mes, dia);
+
+      let diferencia = Math.abs(fecha1 - fecha2);
+      let diasDiferencias = diferencia / 1000 / 3600 / 24;
+      console.log(diasDiferencias);
+    </script>
+  </body>
+</html>
