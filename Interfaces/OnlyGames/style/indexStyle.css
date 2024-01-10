@@ -1,0 +1,130 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: url(../img/background.png), lightgray 0% 0% / 50px 50px repeat;
+}
+
+.parent {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  grid-template-rows: 1fr 7fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.menuTop {
+  grid-area: 1 / 1 / 2 / 3;
+  border-bottom: 1px solid #09f;
+  background: linear-gradient(
+      270deg,
+      rgba(204, 0, 255, 0.2) 0.01%,
+      rgba(0, 0, 0, 0.2) 3.65%,
+      rgba(0, 0, 0, 0.2) 96.35%,
+      rgba(204, 0, 255, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      #09f -15.31%,
+      #000 21.8%,
+      #02060b 83.67%,
+      #09f 116.67%
+    );
+  display: flex;
+  align-items: center;
+}
+
+.mainPage {
+  margin-left: 5%;
+  margin-right: 141px;
+  align-items: center;
+}
+
+.mainPage > img {
+  width: 20%;
+  height: 20%;
+}
+
+@font-face {
+  font-family: "GlichInside"; /* Nombre que le das a tu fuente */
+  src: url("./Fuentes/glitch_inside/Glitch\ inside.otf");
+  /* Puedes agregar más formatos según sea necesario (woff, woff2, etc.) */
+}
+
+.breadcrumb {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-family: GlichInside;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.search-container {
+  text-align: center;
+  border-radius: 50px;
+  background: #d9d9d9;
+  display: flex;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  border-radius: 50px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  background: #d9d9d9;
+}
+
+button {
+  border-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  cursor: pointer;
+  border-left: solid black 0.1em;
+  background: #d9d9d9;
+}
+button > img {
+  width: 22.207px;
+  height: 25.379px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.carrito > img {
+  width: 57px;
+  height: 57px;
+}
+
+.perfil > img {
+  width: 57px;
+  height: 57px;
+}
+
+.menuLeft {
+  grid-area: 2 / 1 / 3 / 2;
+  border-right: 1px solid #c0f;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 153, 255, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 4.17%,
+      rgba(0, 0, 0, 0.2) 95.83%,
+      rgba(0, 153, 255, 0.2) 100%
+    ),
+    linear-gradient(90deg, #c0f -12.92%, #000 15.92%, #000 79.62%, #c0f 115.83%);
+}
+.body {
+  grid-area: 2 / 2 / 3 / 3;
+}
