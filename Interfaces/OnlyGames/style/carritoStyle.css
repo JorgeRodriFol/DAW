@@ -8,15 +8,10 @@ body {
 .parent {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 9fr;
-  grid-template-rows: 1fr 7fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
 }
 
 .menuTop {
-  grid-area: 1 / 1 / 2 / 3;
+  height: 7em;
   border-bottom: 1px solid #09f;
   background: linear-gradient(
       270deg,
@@ -47,7 +42,6 @@ body {
 .mainPage > img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
 
 @font-face {
@@ -107,63 +101,4 @@ button:hover {
 .perfil > img {
   width: 57px;
   height: 57px;
-}
-
-.menuLeft {
-  grid-area: 2 / 1 / 3 / 2;
-  border-right: 1px solid #c0f;
-  background: linear-gradient(
-      180deg,
-      rgba(0, 153, 255, 0.35) 0%,
-      rgba(0, 0, 0, 0.2) 4.17%,
-      rgba(0, 0, 0, 0.2) 95.83%,
-      rgba(0, 153, 255, 0.35) 100%
-    ),
-    linear-gradient(90deg, #c0f -12.92%, #000 15.92%, #000 79.62%, #c0f 115.83%);
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5em;
-}
-
-ul {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0px;
-}
-
-li {
-  text-align: left;
-  list-style: none;
-  padding-bottom: 10px;
-}
-
-label {
-  font-size: small;
-}
-
-.body {
-  grid-area: 2 / 2 / 3 / 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tarjeta {
-  height: 384px;
-  width: 224px;
-  background-color: #181a43;
-  border-radius: 20px;
-  border: solid black 0.2em;
-}
-
-.tarjeta img {
-  width: 224px;
-  height: 304.083px;
-  border-radius: 20px 20px 0px 0px;
-  border-bottom: 1px solid #000;
 }

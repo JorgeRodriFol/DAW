@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form class="form">
+      <input type="text" name="numero" id="numero" /></br>
+      <button onclick="comprobacion()">Comprobar</button>
+    </form>
+
+    <script>
+      function comprobacion() {
+        let input = document.querySelector("#numero").value;
+        let pattern = /^[A-Z][a-z]{3}$/;
+        let form = document.querySelector(".form");
+        if (pattern.test(input)) {
+            form.innerHTML =
+            '<input type="text" name="numero" id="numero" /></br><button onclick="comprobacion()">Comprobar</button>';
+        }else{
+            form.innerHTML =
+              '<input type="text" name="numero" id="numero" /><label form="numero">Introduzca cuatro letras</label></br><button onclick="comprobacion()">Comprobar</button>';
+        }
+      }
+    </script>
+  </body>
 </html>
