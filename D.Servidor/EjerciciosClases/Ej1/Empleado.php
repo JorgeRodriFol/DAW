@@ -1,12 +1,11 @@
 <?php
 class Empleado
 {
-    public $nombre;
-    public $sueldo;
+    private $nombre;
+    private $sueldo;
 
     function __construct()
     {
-        echo "Construllendo objeto...";
         $args = func_get_args();
         $numArgs = func_num_args();
         if ($numArgs == 0 || $numArgs > 2) {
@@ -33,6 +32,17 @@ class Empleado
                 }
             }
         }
+    }
+
+    function __get($name)
+    {
+        echo "Dentro del get...";
+        return $this->$name;
+    }
+    function __set($name, $value)
+    {
+        echo "Dentro del set...";
+        $this->$name = $value;
     }
 }
 ?>

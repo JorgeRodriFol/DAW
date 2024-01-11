@@ -13,7 +13,7 @@
         <li><a href="./Hoja1/indexHoja1.php">Hoja 1</a></li>
         <li><a href="./ejemploFormArray.php">ejemploFormArray</a></li>
         <li><a href="./ej7Form.php">ejemploFormArray</a></li>
-        <li><a href="./PruebaClases/Llamada.php">Llamada</a></li>
+        <li><a href="./EjerciciosClases/Ej1/Llamada.php">Llamada</a></li>
     </ul>
 </body>
 
