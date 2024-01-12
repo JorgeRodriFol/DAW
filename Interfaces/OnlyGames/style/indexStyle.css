@@ -1,6 +1,5 @@
 body {
   width: 100vw;
-  height: 100vh;
   margin: 0;
   background: url(../img/background.png), lightgray 0% 0% / 50px 50px repeat;
 }
@@ -16,6 +15,8 @@ body {
 }
 
 .menuTop {
+  z-index: 10;
+  height: 111px;
   grid-area: 1 / 1 / 2 / 3;
   border-bottom: 1px solid #09f;
   background: linear-gradient(
@@ -104,12 +105,16 @@ button:hover {
   margin-right: 5em;
 }
 
-.perfil > img {
+.perfil {
   width: 57px;
   height: 57px;
 }
 
 .menuLeft {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  width: 172px;
   grid-area: 2 / 1 / 3 / 2;
   border-right: 1px solid #c0f;
   background: linear-gradient(
@@ -148,9 +153,26 @@ label {
 
 .body {
   grid-area: 2 / 2 / 3 / 3;
+}
+
+.body > h1,
+.body > div {
+  color: white;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.categoria {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.flecha {
+  width: 95px;
+  height: 95px;
 }
 
 .tarjeta {
@@ -159,6 +181,11 @@ label {
   background-color: #181a43;
   border-radius: 20px;
   border: solid black 0.2em;
+  margin-bottom: 30px;
+}
+
+.tarjeta a {
+  text-decoration: none;
 }
 
 .tarjeta img {
@@ -166,4 +193,22 @@ label {
   height: 304.083px;
   border-radius: 20px 20px 0px 0px;
   border-bottom: 1px solid #000;
+}
+
+.tarjeta .info {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  grid-template-rows: 40px 40px;
+  color: white;
+  font-size: small;
+}
+.tarjeta .info * {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.tarjeta:hover {
+  transform: scale(1.1);
 }
