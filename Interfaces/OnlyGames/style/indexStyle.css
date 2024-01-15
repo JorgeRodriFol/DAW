@@ -157,6 +157,8 @@ label {
 }
 
 .body {
+  height: 89vh;
+  width: 91vw;
   grid-area: 2 / 2 / 3 / 3;
 }
 
@@ -182,8 +184,8 @@ label {
 }
 
 .tarjeta {
-  height: 384px;
-  width: 224px;
+  height: 40vh;
+  width: 11.5vw;
   background-color: #181a43;
   border-radius: 20px;
   border: solid black 0.2em;
@@ -196,8 +198,8 @@ label {
 }
 
 .tarjeta img {
-  width: 224px;
-  height: 304.083px;
+  height: 31vh;
+  width: 11.5vw;
   border-radius: 20px 20px 0px 0px;
   border-bottom: 1px solid #000;
 }
@@ -205,15 +207,23 @@ label {
 .tarjeta .info {
   display: grid;
   grid-template-columns: 9fr 1fr;
-  grid-template-rows: 40px 40px;
+  grid-template-rows: 1.5fr 1fr;
   color: white;
-  font-size: small;
+  font-size: 0.75vw;
 }
 .tarjeta .info * {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.info > h4 {
+  font-size: 0.75vw;
+}
+
+.info > p {
+  font-size: 0.6vw;
 }
 
 .tarjeta:hover,
@@ -224,4 +234,7 @@ label {
 .tarjeta:active,
 .flecha:active {
   transform: scale(1.05); /*animacion al pulsar*/
+}
+
+@media screen and (max-width: 768px) {
 }
