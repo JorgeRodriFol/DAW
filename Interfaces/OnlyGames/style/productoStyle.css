@@ -7,7 +7,6 @@ body {
 .menuTop {
   z-index: 10;
   height: 11vh;
-  width: 100vw;
   border-bottom: 1px solid #09f;
   background: linear-gradient(
       270deg,
@@ -44,26 +43,6 @@ body {
   src: url("./Fuentes/glitch_inside/Glitch\ inside.otf");
 }
 
-.breadcrumb {
-  color: white;
-  text-align: center;
-  font-family: GlichInside;
-  padding-right: 13vw;
-  font-size: 2.5vh;
-  display: flex;
-  justify-content: center;
-}
-
-.breadcrumb a {
-  color: white;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-  animation: changeColor 5s infinite alternate;
-}
-
 @keyframes changeColor {
   0% {
     color: #09f;
@@ -71,6 +50,13 @@ body {
   100% {
     color: #c0f;
   }
+}
+
+.breadcrumb {
+  color: white;
+  text-align: center;
+  font-family: GlichInside;
+  padding-right: 35vw;
 }
 
 .search-container {
@@ -96,7 +82,7 @@ input[type="text"]:active {
   background: #f3f2f2;
 }
 
-.search-container > button {
+button {
   border-radius: 50px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -127,6 +113,31 @@ button:hover {
   height: 6vh;
 }
 
+.breadcrumb {
+  color: white;
+  text-align: center;
+  font-family: GlichInside;
+  padding-right: 13vw;
+  font-size: 2.5vh;
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  animation: changeColor 5s infinite alternate;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .juego {
   display: flex;
   justify-content: center;
@@ -136,6 +147,7 @@ button:hover {
 .portada {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 
@@ -144,29 +156,44 @@ button:hover {
 }
 .portada > button {
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 50px;
-  width: 341px;
-  height: 60px;
+  width: 200px;
+  height: 40px;
   color: #000;
   font-family: Zen Antique Soft;
-  font-size: 32px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
+  background: #d9d9d9;
+  transition: 0.2s;
+}
+
+.portada > button:hover {
+  transform: scale(1.1);
+}
+
+.portada > button:active {
+  transform: scale(1.05); /*animacion al pulsar*/
 }
 
 .portada > button > img {
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
 }
 
-.info > h1 {
+.portada > .addCarrito:hover {
+  background: #f3f2f2;
+}
+
+.detalles > h1 {
   width: 30vw;
   color: white;
   text-align: end;
 }
 
-.info > h4 {
+.detalles > h4 {
   margin-top: 46px;
   width: 30vw;
   color: white;
@@ -174,7 +201,7 @@ button:hover {
 }
 
 .descripcion {
-  margin-left: 210px;
+  margin-left: 275px;
   width: 365px;
   height: 186px;
   border-radius: 30px;
@@ -190,4 +217,64 @@ button:hover {
 .descripcion > p {
   color: white;
   padding: 10px;
+}
+
+.recomendaciones {
+  color: white;
+}
+
+.saga {
+  width: 994px;
+  height: 186px;
+  border-radius: 30px;
+  border: 3px solid #09f;
+  background: linear-gradient(92deg, rgba(255, 255, 255, 0) 50%, #fff 354.85%);
+  margin-bottom: 50px;
+}
+
+.similares {
+  width: 994px;
+  height: 186px;
+  border-radius: 30px;
+  border: 3px solid #09f;
+  background: linear-gradient(92deg, rgba(255, 255, 255, 0) 50%, #fff 354.85%);
+  margin-bottom: 30px;
+}
+
+.tarjeta {
+  margin-left: 10px;
+  width: 113px;
+  height: 174.933px;
+  background-color: #181a43;
+  border-radius: 20px;
+  border: solid black 0.2em;
+  margin-bottom: 30px;
+  transition: 0.2s;
+}
+
+.tarjeta a {
+  text-decoration: none;
+}
+
+.tarjeta img {
+  width: 113px;
+  height: 138.466px;
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: 1px solid #000;
+}
+
+.info > h4 {
+  color: white;
+  font-size: 8px;
+  text-align: center;
+}
+
+.tarjeta:hover,
+.flecha:hover {
+  transform: scale(1.1);
+}
+
+.tarjeta:active,
+.flecha:active {
+  transform: scale(1.05); /*animacion al pulsar*/
 }

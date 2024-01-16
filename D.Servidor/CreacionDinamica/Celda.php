@@ -12,5 +12,7 @@ class Celda
         $this->colorFondo = "";
     }
 
+    
+
 }
 ?>
