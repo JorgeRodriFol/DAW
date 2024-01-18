@@ -8,11 +8,11 @@ class Celda
     function __construct()
     {
         $this->valor = "";
-        $this->colorTexto = "";
-        $this->colorFondo = "";
+        $this->colorTexto = "black";
+        $this->colorFondo = "white";
     }
 
-    
+
 
 }
 ?>

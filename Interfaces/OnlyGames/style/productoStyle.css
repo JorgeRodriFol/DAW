@@ -56,13 +56,25 @@ body {
   color: white;
   text-align: center;
   font-family: GlichInside;
-  padding-right: 35vw;
+  padding-right: 13vw;
+  font-size: 2.5vh;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  animation: changeColor 5s infinite alternate;
 }
 
 .search-container {
   text-align: center;
   border-radius: 50px;
-  background: #d9d9d9;
   display: flex;
   margin-right: 15vw;
 }
@@ -113,25 +125,6 @@ button:hover {
   height: 6vh;
 }
 
-.breadcrumb {
-  color: white;
-  text-align: center;
-  font-family: GlichInside;
-  padding-right: 13vw;
-  font-size: 2.5vh;
-  display: flex;
-  justify-content: center;
-}
-
-.breadcrumb a {
-  color: white;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover {
-  text-decoration: underline;
-  animation: changeColor 5s infinite alternate;
-}
 .body {
   display: flex;
   flex-direction: column;
@@ -205,7 +198,9 @@ button:hover {
   width: 365px;
   height: 186px;
   border-radius: 30px;
-  border: 3px solid #09f;
+  border: 5px solid;
+  border-image: linear-gradient(to bottom, #0099ff, #cc00fff9);
+  border-image-slice: 1;
 
   background: radial-gradient(
     509.16% 193.97% at 50.14% 50%,
@@ -227,7 +222,9 @@ button:hover {
   width: 994px;
   height: 186px;
   border-radius: 30px;
-  border: 3px solid #09f;
+  border: 5px solid;
+  border-image: linear-gradient(to bottom, #0099ff, #cc00fff9);
+  border-image-slice: 1;
   background: linear-gradient(92deg, rgba(255, 255, 255, 0) 50%, #fff 354.85%);
   margin-bottom: 50px;
 }
@@ -236,7 +233,9 @@ button:hover {
   width: 994px;
   height: 186px;
   border-radius: 30px;
-  border: 3px solid #09f;
+  border: 5px solid;
+  border-image: linear-gradient(to bottom, #0099ff, #cc00fff9);
+  border-image-slice: 1;
   background: linear-gradient(92deg, rgba(255, 255, 255, 0) 50%, #fff 354.85%);
   margin-bottom: 30px;
 }
@@ -277,4 +276,144 @@ button:hover {
 .tarjeta:active,
 .flecha:active {
   transform: scale(1.05); /*animacion al pulsar*/
+}
+
+@media screen and (max-width: 1500px) {
+  .parent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .menuTop {
+    width: 100vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8vw;
+  }
+
+  .menuTop * {
+    margin: 0px;
+  }
+
+  .breadcrumb {
+    padding-right: 3vw;
+  }
+
+  .breadcrumb span {
+    width: 25vw;
+  }
+
+  input[type="text"] {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+
+  button {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-left-style: none;
+  }
+
+  .categoria {
+    flex-direction: column;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flecha {
+    height: 0px;
+  }
+
+  .tarjeta {
+    width: 25vw;
+  }
+
+  .tarjeta img {
+    width: 25vw;
+  }
+
+  .info > h4 {
+    font-size: 1.25vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .menuTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .menuTop * {
+    margin: 0px;
+  }
+
+  .mainPage {
+    height: 5vh;
+  }
+
+  .mainPage > img {
+    height: 5vh;
+  }
+
+  .breadcrumb {
+    padding-right: 3vw;
+  }
+
+  input[type="text"] {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+
+  button {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-left-style: none;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .juego {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portada > img {
+    width: 75vw;
+  }
+
+  .tarjeta {
+    width: 50vw;
+  }
+
+  .tarjeta img {
+    width: 50vw;
+  }
+
+  .info > h4 {
+    font-size: 3vw;
+  }
 }

@@ -63,8 +63,6 @@ body {
 
 .search-container {
   text-align: center;
-  border-radius: 50px;
-  background: #d9d9d9;
   display: flex;
   margin-right: 15vw;
 }
@@ -236,5 +234,149 @@ label {
   transform: scale(1.05); /*animacion al pulsar*/
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1500px) {
+  .parent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .menuTop {
+    width: 100vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9vw;
+  }
+
+  .mainPage {
+    height: 5vh;
+    margin-left: 0px;
+  }
+
+  .mainPage > img {
+    height: 5vh;
+  }
+
+  .breadcrumb {
+    padding-right: 3vw;
+  }
+
+  input[type="text"] {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+
+  button {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-left-style: none;
+  }
+
+  .menuLeft {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    flex-direction: row;
+  }
+
+  .categoria {
+    flex-direction: column;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flecha {
+    height: 0px;
+  }
+
+  .tarjeta {
+    width: 25vw;
+  }
+
+  .tarjeta img {
+    width: 25vw;
+  }
+
+  .info > h4 {
+    font-size: 1.25vw;
+  }
+
+  .info > p {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .parent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .menuTop {
+    width: 100vw;
+  }
+
+  .mainPage {
+    height: 5vh;
+  }
+
+  .mainPage > img {
+    height: 5vh;
+  }
+
+  .breadcrumb {
+    padding-right: 3vw;
+  }
+
+  input[type="text"] {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+
+  button {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-left-style: none;
+  }
+
+  .menuLeft {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    flex-direction: row;
+  }
+
+  .categoria {
+    flex-direction: column;
+  }
+
+  .flecha {
+    height: 0px;
+  }
+
+  .tarjeta {
+    width: 50vw;
+  }
+
+  .tarjeta img {
+    width: 50vw;
+  }
+
+  .info > h4 {
+    font-size: 3vw;
+  }
+
+  .info > p {
+    font-size: 2vw;
+  }
 }

@@ -23,5 +23,12 @@ class Tabla
         }
 
     }
+    function insertar($posicion, $valor, $colorTexto, $colorFondo)
+    {
+        $posicion = explode('-', $posicion);
+        if ($posicion[0] < $this->numFilas && $posicion[1] < $this->numColumnas) {
+            $celda = $this->tablero[$posicion[0]][$posicion[1]];
+        }
+    }
 }
 ?>
