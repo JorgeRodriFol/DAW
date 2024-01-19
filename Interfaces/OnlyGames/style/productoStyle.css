@@ -121,8 +121,18 @@ button:hover {
   object-fit: contain;
 }
 
-.perfil {
-  height: 6vh;
+.log_in {
+  font-family: GlichInside;
+}
+
+.log_in a {
+  color: white;
+  text-decoration: none;
+}
+
+.log_in a:hover {
+  text-decoration: underline;
+  animation: changeColor 5s infinite alternate;
 }
 
 .body {

@@ -129,78 +129,46 @@ button:hover {
   object-fit: contain;
 }
 
-.log_in {
-  font-family: GlichInside;
-}
-
-.log_in a {
+.body form {
   color: white;
-  text-decoration: none;
-}
-
-.log_in a:hover {
-  text-decoration: underline;
-  animation: changeColor 5s infinite alternate;
 }
 
 .body {
+  height: 89vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+  gap: 25vw;
 }
 
-.producto {
-  margin-top: 70px;
-  padding-bottom: 10px;
-  width: 90vw;
-  border-bottom: 5px solid;
-  border-image: linear-gradient(
-    to right,
-    rgba(31, 0, 39, 0.1),
-    #cc00fff9,
-    #0099ff,
-    rgba(0, 9, 15, 0.1)
-  );
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+form input[type="text"] {
+  width: 466px;
+  height: 47px;
+  border: 5px solid;
+  border-image: linear-gradient(to bottom, #0099ff, #cc00fff9);
   border-image-slice: 1;
-  background: rgba(217, 217, 217, 0);
+}
+
+.body img {
+  height: 70vh;
+}
+
+.body div {
   display: flex;
-  align-items: center;
-  gap: 15px;
-  color: white;
-}
-
-.portada {
-  margin-left: 100px;
-  height: 30vh;
-}
-
-.informacion {
-  display: flex;
-  flex-direction: column;
-  gap: 140px;
-}
-
-.precio {
-  margin-left: 450px;
-}
-
-.total {
-  position: fixed;
-  bottom: 0px;
-  z-index: 10;
-  color: white;
-  width: 100vw;
-  display: flex;
-  gap: 50vw;
   justify-content: center;
   align-items: center;
-  border-top: 5px solid;
-  border-image: linear-gradient(
-    to right,
-    rgba(31, 0, 39, 0.1),
-    #cc00fff9,
-    #0099ff,
-    rgba(0, 9, 15, 0.1)
-  );
-  border-image-slice: 1;
+  gap: 10vw;
+}
+
+.body div button {
+  width: 6vw;
+  height: 3vh;
+  border-radius: 50px;
+  font-size: 2vh;
 }
