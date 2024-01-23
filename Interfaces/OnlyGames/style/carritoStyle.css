@@ -204,3 +204,182 @@ button:hover {
   );
   border-image-slice: 1;
 }
+
+@media only screen and (max-width: 1500px) {
+  .menuTop {
+    padding-right: 10vw;
+  }
+
+  .breadcrumb {
+    padding-right: 10vw;
+  }
+
+  .search-container {
+    margin-right: 5vw;
+  }
+
+  .menuTop button {
+    margin-right: 2vw;
+  }
+
+  .carrito {
+    margin-right: 2vw;
+  }
+
+  .log_in {
+    padding-right: 5vw;
+  }
+
+  .producto {
+    margin-left: 5vw;
+    width: 80vw;
+  }
+
+  .portada {
+    margin-left: 5vw;
+    height: 20vh;
+  }
+
+  .informacion {
+    gap: 10px;
+  }
+
+  .precio {
+    margin-left: 10vw;
+  }
+
+  .total {
+    gap: 25vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuTop {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .mainPage {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .breadcrumb {
+    padding-right: 0;
+    font-size: 1.5rem;
+  }
+
+  .search-container {
+    margin-right: 0;
+  }
+
+  .menuTop input[type="text"] {
+    width: 100%;
+  }
+
+  .menuTop button {
+    border-left: none;
+    margin-top: 10px;
+  }
+
+  .carrito {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .log_in {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .body {
+    padding: 20px;
+  }
+
+  .producto {
+    margin-top: 20px;
+  }
+
+  .portada {
+    margin-left: 0;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .informacion {
+    gap: 20px;
+  }
+
+  .precio {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .total {
+    gap: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background: lightgray;
+    background-size: auto;
+  }
+
+  .menuTop {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .mainPage {
+    margin: 2vh 0;
+    order: 1;
+  }
+
+  .breadcrumb {
+    padding-right: 0;
+    font-size: 2vh;
+    text-align: center;
+  }
+
+  .search-container {
+    margin: 0;
+    padding: 2vh;
+  }
+
+  .menuTop input[type="text"] {
+    width: 100%;
+  }
+
+  .menuTop button {
+    margin-left: 0;
+    border-left: none;
+  }
+
+  .body {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    gap: 5vw;
+  }
+
+  form input[type="text"] {
+    width: 100%;
+  }
+  .body img {
+    height: auto;
+    width: 80%;
+  }
+
+  .body div {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .body div button {
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+}

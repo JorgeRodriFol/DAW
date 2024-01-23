@@ -172,3 +172,43 @@ form input[type="text"] {
   border-radius: 50px;
   font-size: 2vh;
 }
+
+@media screen and (max-width: 1500px) {
+  .body {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 5vh;
+  }
+
+  .breadcrumb {
+    padding-right: 10vw;
+  }
+
+  .search-container {
+    margin-right: 5vw;
+  }
+
+  .menuTop input[type="text"] {
+    width: 10vw;
+  }
+
+  .body {
+    margin-top: 11vh;
+  }
+
+  .body img {
+    height: auto;
+    width: 70%;
+  }
+
+  .body div {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .body div button {
+    width: 20vw;
+    margin-top: 2vh;
+  }
+}

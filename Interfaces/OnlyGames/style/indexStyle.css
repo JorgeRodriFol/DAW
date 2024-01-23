@@ -250,7 +250,7 @@ label {
 
 .tarjeta:active,
 .flecha:active {
-  transform: scale(1.05); /*animacion al pulsar*/
+  transform: scale(1.05);
 }
 
 @media screen and (max-width: 1500px) {

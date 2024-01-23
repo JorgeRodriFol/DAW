@@ -63,17 +63,12 @@ function pintarTablero() {
   for (let i = 0; i < tablero.length; i++) {
     let fila = document.createElement("tr");
     for (let j = 0; j < tablero[i].length; ++j) {
-      tablero[i][j].addEventListener("mousedown", function (event) {
-        if (event.which === 1) {
-          if (tablero[i][j].classList == -1) {
-            alert("Explotaste");
-            location.reload();
-          } else {
-            mostrarCasillasAlrededor(i, j);
-          }
-        } else if (event.which === 3) {
-          event.preventDefault();
-          tablero[i][j].textContent = "X";
+      tablero[i][j].addEventListener("click", function () {
+        if (tablero[i][j].classList == -1) {
+          alert("Explotaste");
+          location.reload();
+        } else {
+          mostrarCasillasAlrededor(i, j);
         }
       });
       fila.appendChild(tablero[i][j]);
@@ -93,16 +88,13 @@ function mostrarCasillasAlrededor(fila, columna) {
           nuevaFila < filas &&
           nuevaColumna >= 0 &&
           nuevaColumna < columnas &&
-          tablero[nuevaFila][nuevaColumna].classList >= 0 &&
-          tablero[nuevaFila][nuevaColumna].trim() === ""
+          tablero[nuevaFila][nuevaColumna].classList >= 0
         ) {
           tablero[nuevaFila][nuevaColumna].textContent =
             tablero[nuevaFila][nuevaColumna].classList;
-          mostrarCasillasAlrededor(nuevaFila, nuevaColumna);
         }
       }
     }
-  } else {
-    tablero[fila][columna].textContent = tablero[fila][columna].classList;
   }
+  tablero[fila][columna].textContent = tablero[fila][columna].classList;
 }
