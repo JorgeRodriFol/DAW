@@ -212,3 +212,69 @@ form input[type="text"] {
     margin-top: 2vh;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .menuTop {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .mainPage {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .breadcrumb {
+    padding-right: 0;
+    font-size: 1.5rem;
+  }
+
+  .search-container {
+    margin-right: 0;
+  }
+
+  .menuTop input[type="text"] {
+    width: 100%;
+  }
+
+  .menuTop button {
+    border-left: none;
+    margin-top: 10px;
+  }
+
+  .carrito {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .body {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    margin-top: 5vh;
+  }
+
+  .body {
+    margin-top: 11vh;
+  }
+
+  .body input[type="text"] {
+    width: 90vw;
+  }
+
+  .body img {
+    height: auto;
+    width: 70%;
+  }
+
+  .body div {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  .body div button {
+    width: 20vw;
+    margin-top: 2vh;
+  }
+}
