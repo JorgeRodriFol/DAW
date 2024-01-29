@@ -83,32 +83,59 @@
   border-radius: 20px;
 }
 
-.celda1 {
+#celda1 {
   grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda2 {
+#celda2 {
   grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda3 {
+#celda3 {
   grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda4 {
+#celda4 {
   grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda5 {
+#celda5 {
   grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda6 {
+#celda6 {
   grid-area: 2 / 3 / 3 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda7 {
+#celda7 {
   grid-area: 3 / 1 / 4 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda8 {
+#celda8 {
   grid-area: 3 / 2 / 4 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.celda9 {
+#celda9 {
   grid-area: 3 / 3 / 4 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .estadisticas {
