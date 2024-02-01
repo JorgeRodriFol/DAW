@@ -14,11 +14,11 @@
           <div class="modoFichas">
             <h2>MODO</h2>
             <div class="variantes">
-              <button class="nueve" onclick="cambiarModo('nueve')">
+              <button class="nueve" onclick="cambiarModo('nueve','j1')">
                 <h3>9</h3>
                 <p>fichas</p>
               </button>
-              <button class="seis" onclick="cambiarModo('seis')">
+              <button class="seis" onclick="cambiarModo('seis','j1')">
                 <h3>6</h3>
                 <p>fichas</p>
               </button>
@@ -42,50 +42,51 @@
         <div class="tablero">
           <button
             id="celda1"
-            class="false"
-            onclick="ponerFicha('celda1')"
+            class="none"
+            onclick="jugadaJ1('celda1','j1')"
           ></button>
           <button
             id="celda2"
-            class="false"
-            onclick="ponerFicha('celda2')"
+            class="none"
+            onclick="jugadaJ1('celda2','j1')"
           ></button>
           <button
             id="celda3"
-            class="false"
-            onclick="ponerFicha('celda3')"
+            class="none"
+            onclick="jugadaJ1('celda3','j1')"
           ></button>
           <button
             id="celda4"
-            class="false"
-            onclick="ponerFicha('celda4')"
+            class="none"
+            onclick="jugadaJ1('celda4','j1')"
           ></button>
           <button
             id="celda5"
-            class="false"
-            onclick="ponerFicha('celda5')"
+            class="none"
+            onclick="jugadaJ1('celda5','j1')"
           ></button>
           <button
             id="celda6"
-            class="false"
-            onclick="ponerFicha('celda6')"
+            class="none"
+            onclick="jugadaJ1('celda6','j1')"
           ></button>
           <button
             id="celda7"
-            class="false"
-            onclick="ponerFicha('celda7')"
+            class="none"
+            onclick="jugadaJ1('celda7','j1')"
           ></button>
           <button
             id="celda8"
-            class="false"
-            onclick="ponerFicha('celda8')"
+            class="none"
+            onclick="jugadaJ1('celda8','j1')"
           ></button>
           <button
             id="celda9"
-            class="false"
-            onclick="ponerFicha('celda9')"
+            class="none"
+            onclick="jugadaJ1('celda9','j1')"
           ></button>
         </div>
+        <button onclick="reiniciar()">Nueva Partida</button>
       </div>
       <div class="estadisticas">
         <div class="tiempos">
@@ -112,12 +113,12 @@
             <th>Derrota</th>
           </tr>
           <tr>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
+            <td id="victoriaJ1">0</td>
+            <td id="empateJ1">0</td>
+            <td id="derrotaJ1">0</td>
+            <td id="victoriaJ2">0</td>
+            <td id="empateJ2">0</td>
+            <td id="derrotaJ2">0</td>
           </tr>
         </table>
       </div>
