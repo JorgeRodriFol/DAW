@@ -1,35 +1,61 @@
 var modo = "nueve";
+var modoJ2 = "aleatorio";
 var fichasJ1 = 0;
 var fichasJ2 = 0;
 var victorias = 0;
 var derrotas = 0;
 var empates = 0;
 var tiempo = 0;
-let cronometro;
-let fin = false;
+var cronometro;
+var fin = false;
 var turno = 1;
+const tablero = [];
+var intervalo;
 
 iniciarTiempo();
+iniciarCuentaRegresiva();
 
-function jugadaJ1(id, jugador) {
+function jugadaJugador(id, jugador) {
   if (!fin) {
-    let casilla = document.getElementById(id);
-    if (modo == "nueve") {
-      if (casilla.className == "none") {
-        pintarFicha(casilla, jugador);
-        setTimeout(comprobarVictoria, 250);
+    if (modoJ2 == "2jugadores" && turno % 2 == 0) {
+      let casilla = document.getElementById(id);
+      if (modo == "nueve") {
+        if (casilla.className == "none") {
+          pintarFicha(casilla, "j2");
+          setTimeout(comprobarVictoria, 250);
+        }
+      } else {
+        if (fichasJ2 < 3 && casilla.className == "none") {
+          pintarFicha(casilla, "j2");
+          fichasJ2++;
+          setTimeout(comprobarVictoria, 250);
+        } else if (fichasJ2 == 3 && casilla.className == "none") {
+          alert("Deberas mover una de tus otras fichas");
+        } else if (fichasJ2 == 3 && casilla.className == "j2") {
+          casilla.innerHTML = "";
+          casilla.className = "none";
+          fichasJ2--;
+        }
       }
     } else {
-      if (fichasJ1 < 3 && casilla.className == "none") {
-        pintarFicha(casilla, "j1");
-        fichasJ1++;
-        setTimeout(comprobarVictoria, 250);
-      } else if (fichasJ1 == 3 && casilla.className == "none") {
-        alert("Deberas mover una de tus otras fichas");
-      } else if (fichasJ1 == 3 && casilla.className == "j1") {
-        casilla.innerHTML = "";
-        casilla.className = "none";
-        fichasJ1--;
+      let casilla = document.getElementById(id);
+      if (modo == "nueve") {
+        if (casilla.className == "none") {
+          pintarFicha(casilla, jugador);
+          setTimeout(comprobarVictoria, 250);
+        }
+      } else {
+        if (fichasJ1 < 3 && casilla.className == "none") {
+          pintarFicha(casilla, jugador);
+          fichasJ1++;
+          setTimeout(comprobarVictoria, 250);
+        } else if (fichasJ1 == 3 && casilla.className == "none") {
+          alert("Deberas mover una de tus otras fichas");
+        } else if (fichasJ1 == 3 && casilla.className == "j1") {
+          casilla.innerHTML = "";
+          casilla.className = "none";
+          fichasJ1--;
+        }
       }
     }
   }
@@ -76,6 +102,7 @@ function comprobarVictoria() {
     derrotaJ2.innerHTML = victorias;
     fin = true;
     detenerCronometro();
+    detenerRegresion();
   } else if (
     (tablero[0].className == "j2" &&
       tablero[1].className == "j2" &&
@@ -110,10 +137,11 @@ function comprobarVictoria() {
     derrotaJ1.innerHTML = derrotas;
     fin = true;
     detenerCronometro();
+    detenerRegresion();
   }
   turno++;
-  if (turno % 2 == 0 && !fin) {
-    jugadaJ2();
+  if (turno % 2 == 0 && !fin && modoJ2 != "2jugadores") {
+    jugadaOrdenador();
   }
 }
 
@@ -137,68 +165,73 @@ function detenerCronometro() {
   clearInterval(cronometro);
 }
 
-function jugadaJ2() {
+function jugadaOrdenador() {
+  console.log("j2");
   let casillaAnterior = null;
   const tablero = document.querySelectorAll(".tablero button");
   let jugado = false;
   while (!jugado) {
-    if (modo == "nueve") {
-      idCasilla = parseInt(Math.random() * 9);
-      if (tablero[idCasilla].className == "none") {
-        pintarFicha(tablero[idCasilla], "j2");
-        jugado = true;
-        setTimeout(comprobarVictoria, 250);
-      }
-    } else {
-      if (fichasJ2 == 3) {
-        let fichaQuitada = false;
-        while (!fichaQuitada) {
-          idCasilla = parseInt(Math.random() * 9);
-          if (tablero[idCasilla].className == "j2") {
-            tablero[idCasilla].innerHTML = "";
-            tablero[idCasilla].className = "none";
-            fichasJ2--;
-            fichaQuitada = true;
-            casillaAnterior = idCasilla;
-          }
-        }
-      }
-      if (casillaAnterior == null) {
+    if (modoJ2 == "aleatorio") {
+      if (modo == "nueve") {
         idCasilla = parseInt(Math.random() * 9);
         if (tablero[idCasilla].className == "none") {
-          let ficha = document.createElement("div");
-          ficha.style.borderRadius = "50%";
-          ficha.style.border = "none";
-          ficha.style.backgroundColor = "blue";
-          ficha.style.height = "75px";
-          ficha.style.width = "75px";
-          tablero[idCasilla].appendChild(ficha);
-          tablero[idCasilla].className = "j2";
-          fichasJ2++;
+          pintarFicha(tablero[idCasilla], "j2");
           jugado = true;
           setTimeout(comprobarVictoria, 250);
         }
       } else {
-        idCasilla = parseInt(Math.random() * 9);
-        if (
-          tablero[idCasilla].className == "none" &&
-          idCasilla != casillaAnterior
-        ) {
-          let ficha = document.createElement("div");
-          ficha.style.borderRadius = "50%";
-          ficha.style.border = "none";
-          ficha.style.backgroundColor = "blue";
-          ficha.style.height = "75px";
-          ficha.style.width = "75px";
-          tablero[idCasilla].appendChild(ficha);
-          tablero[idCasilla].className = "j2";
-          fichasJ2++;
-          jugado = true;
-          setTimeout(comprobarVictoria, 250);
+        if (fichasJ2 == 3) {
+          let fichaQuitada = false;
+          while (!fichaQuitada) {
+            idCasilla = parseInt(Math.random() * 9);
+            if (tablero[idCasilla].className == "j2") {
+              tablero[idCasilla].innerHTML = "";
+              tablero[idCasilla].className = "none";
+              fichasJ2--;
+              fichaQuitada = true;
+              casillaAnterior = idCasilla;
+            }
+          }
+        }
+        if (casillaAnterior == null) {
+          idCasilla = parseInt(Math.random() * 9);
+          if (tablero[idCasilla].className == "none") {
+            let ficha = document.createElement("div");
+            ficha.style.borderRadius = "50%";
+            ficha.style.border = "none";
+            ficha.style.backgroundColor = "blue";
+            ficha.style.height = "75px";
+            ficha.style.width = "75px";
+            tablero[idCasilla].appendChild(ficha);
+            tablero[idCasilla].className = "j2";
+            fichasJ2++;
+            jugado = true;
+            setTimeout(comprobarVictoria, 250);
+          }
+        } else {
+          idCasilla = parseInt(Math.random() * 9);
+          if (
+            tablero[idCasilla].className == "none" &&
+            idCasilla != casillaAnterior
+          ) {
+            let ficha = document.createElement("div");
+            ficha.style.borderRadius = "50%";
+            ficha.style.border = "none";
+            ficha.style.backgroundColor = "blue";
+            ficha.style.height = "75px";
+            ficha.style.width = "75px";
+            tablero[idCasilla].appendChild(ficha);
+            tablero[idCasilla].className = "j2";
+            fichasJ2++;
+            jugado = true;
+            setTimeout(comprobarVictoria, 250);
+          }
         }
       }
+    } else if (modoJ2 == "2jugadores") {
     }
   }
+  reiniciarCuentaRegresiva();
 }
 
 function reiniciar() {
@@ -213,6 +246,7 @@ function reiniciar() {
     casillas[i].className = "none";
   }
   fin = false;
+  reiniciarCuentaRegresiva();
 }
 
 function pintarFicha(casilla, jugador) {
@@ -232,4 +266,37 @@ function pintarFicha(casilla, jugador) {
   ficha.style.width = "75px";
   casilla.appendChild(ficha);
   casilla.className = jugador;
+}
+
+function cambiarModoJugador(nuevoModo) {
+  modoJ2 = nuevoModo;
+}
+
+function iniciarCuentaRegresiva() {
+  let tiempoRestante = 14;
+  let tRestante = document.querySelector(".tRestante h1");
+  intervalo = setInterval(() => {
+    tRestante.innerHTML = "00:" + tiempoRestante.toString().padStart(2, "0");
+
+    if (tiempoRestante <= 0) {
+      turno++;
+      if (modoJ2 == "2jugadores") {
+        reiniciarCuentaRegresiva();
+      } else {
+        clearInterval(intervalo);
+        jugadaOrdenador();
+      }
+    }
+
+    tiempoRestante--;
+  }, 1000);
+}
+
+function reiniciarCuentaRegresiva() {
+  clearInterval(intervalo);
+  iniciarCuentaRegresiva();
+}
+
+function detenerRegresion() {
+  clearInterval(intervalo);
 }

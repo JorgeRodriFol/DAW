@@ -27,13 +27,19 @@
           <div class="modoJugador">
             <h2>MODO</h2>
             <div class="variantes">
-              <button class="aleatorio">
+              <button
+                class="aleatorio"
+                onclick="cambiarModoJugador('aleatorio')"
+              >
                 <p>1 vs aleatorio</p>
               </button>
-              <button class="IA">
+              <button class="IA" onclick="cambiarModoJugador('ia')">
                 <p>1 vs IA</p>
               </button>
-              <button class="jugador2">
+              <button
+                class="jugador2"
+                onclick="cambiarModoJugador('2jugadores')"
+              >
                 <p>2 jugadores</p>
               </button>
             </div>
@@ -43,47 +49,47 @@
           <button
             id="celda1"
             class="none"
-            onclick="jugadaJ1('celda1','j1')"
+            onclick="jugadaJugador('celda1','j1')"
           ></button>
           <button
             id="celda2"
             class="none"
-            onclick="jugadaJ1('celda2','j1')"
+            onclick="jugadaJugador('celda2','j1')"
           ></button>
           <button
             id="celda3"
             class="none"
-            onclick="jugadaJ1('celda3','j1')"
+            onclick="jugadaJugador('celda3','j1')"
           ></button>
           <button
             id="celda4"
             class="none"
-            onclick="jugadaJ1('celda4','j1')"
+            onclick="jugadaJugador('celda4','j1')"
           ></button>
           <button
             id="celda5"
             class="none"
-            onclick="jugadaJ1('celda5','j1')"
+            onclick="jugadaJugador('celda5','j1')"
           ></button>
           <button
             id="celda6"
             class="none"
-            onclick="jugadaJ1('celda6','j1')"
+            onclick="jugadaJugador('celda6','j1')"
           ></button>
           <button
             id="celda7"
             class="none"
-            onclick="jugadaJ1('celda7','j1')"
+            onclick="jugadaJugador('celda7','j1')"
           ></button>
           <button
             id="celda8"
             class="none"
-            onclick="jugadaJ1('celda8','j1')"
+            onclick="jugadaJugador('celda8','j1')"
           ></button>
           <button
             id="celda9"
             class="none"
-            onclick="jugadaJ1('celda9','j1')"
+            onclick="jugadaJugador('celda9','j1')"
           ></button>
         </div>
         <button onclick="reiniciar()">Nueva Partida</button>
