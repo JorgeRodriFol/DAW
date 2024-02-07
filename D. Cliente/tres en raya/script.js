@@ -21,8 +21,6 @@ function jugadaJugador(id, jugador) {
       let casilla = document.getElementById(id);
       if (modo == "nueve") {
         if (casilla.className == "none") {
-          pintarFicha(casilla, "j2");
-          setTimeout(comprobarVictoria, 250);
         }
       } else {
         if (fichasJ2 < 3 && casilla.className == "none") {
@@ -68,6 +66,7 @@ function cambiarModo(nuevoModo) {
 
 function comprobarVictoria() {
   const tablero = document.querySelectorAll(".tablero button");
+
   if (
     (tablero[0].className == "j1" &&
       tablero[1].className == "j1" &&
@@ -138,10 +137,32 @@ function comprobarVictoria() {
     fin = true;
     detenerCronometro();
     detenerRegresion();
+  } else if (!fin) {
+    let contador = 0;
+    for (let i = 0; i < tablero.length; i++) {
+      if (tablero[i].className == "none") {
+        break;
+      }
+      contador++;
+    }
+    if (contador == tablero.length) {
+      alert("Empate");
+      let empateJ2 = document.querySelector("#empateJ2");
+      let empateJ1 = document.querySelector("#empateJ1");
+      empates++;
+      empateJ2.innerHTML = empates;
+      empateJ1.innerHTML = empates;
+      fin = true;
+      detenerCronometro();
+      detenerRegresion();
+    }
   }
   turno++;
-  if (turno % 2 == 0 && !fin && modoJ2 != "2jugadores") {
-    jugadaOrdenador();
+  if (!fin) {
+    reiniciarCuentaRegresiva();
+    if (turno % 2 == 0 && modoJ2 != "2jugadores") {
+      jugadaOrdenador();
+    }
   }
 }
 
@@ -166,14 +187,13 @@ function detenerCronometro() {
 }
 
 function jugadaOrdenador() {
-  console.log("j2");
   let casillaAnterior = null;
   const tablero = document.querySelectorAll(".tablero button");
   let jugado = false;
-  while (!jugado) {
-    if (modoJ2 == "aleatorio") {
+  if (modoJ2 == "aleatorio") {
+    while (!jugado) {
       if (modo == "nueve") {
-        idCasilla = parseInt(Math.random() * 9);
+        let idCasilla = parseInt(Math.random() * 9);
         if (tablero[idCasilla].className == "none") {
           pintarFicha(tablero[idCasilla], "j2");
           jugado = true;
@@ -183,7 +203,7 @@ function jugadaOrdenador() {
         if (fichasJ2 == 3) {
           let fichaQuitada = false;
           while (!fichaQuitada) {
-            idCasilla = parseInt(Math.random() * 9);
+            let idCasilla = parseInt(Math.random() * 9);
             if (tablero[idCasilla].className == "j2") {
               tablero[idCasilla].innerHTML = "";
               tablero[idCasilla].className = "none";
@@ -194,7 +214,7 @@ function jugadaOrdenador() {
           }
         }
         if (casillaAnterior == null) {
-          idCasilla = parseInt(Math.random() * 9);
+          let idCasilla = parseInt(Math.random() * 9);
           if (tablero[idCasilla].className == "none") {
             let ficha = document.createElement("div");
             ficha.style.borderRadius = "50%";
@@ -209,7 +229,7 @@ function jugadaOrdenador() {
             setTimeout(comprobarVictoria, 250);
           }
         } else {
-          idCasilla = parseInt(Math.random() * 9);
+          let idCasilla = parseInt(Math.random() * 9);
           if (
             tablero[idCasilla].className == "none" &&
             idCasilla != casillaAnterior
@@ -228,10 +248,32 @@ function jugadaOrdenador() {
           }
         }
       }
-    } else if (modoJ2 == "2jugadores") {
+    }
+  } else if (modoJ2 == "ia") {
+    if (modo == "nueve") {
+      let idCasilla = mejorPosicion(tablero);
+      pintarFicha(tablero[idCasilla], "j2");
+      setTimeout(comprobarVictoria, 250);
+    } else {
+      if (fichasJ2 == 3) {
+        let fichaQuitada = false;
+        while (!fichaQuitada) {
+          let idCasilla = parseInt(Math.random() * 9);
+          if (tablero[idCasilla].className == "j2") {
+            tablero[idCasilla].innerHTML = "";
+            tablero[idCasilla].className = "none";
+            fichasJ2--;
+            fichaQuitada = true;
+            casillaAnterior = idCasilla;
+          }
+        }
+      }
+      let idCasilla = mejorPosicion(tablero);
+      pintarFicha(tablero[idCasilla], "j2");
+      fichasJ2++;
+      setTimeout(comprobarVictoria, 250);
     }
   }
-  reiniciarCuentaRegresiva();
 }
 
 function reiniciar() {
@@ -270,6 +312,7 @@ function pintarFicha(casilla, jugador) {
 
 function cambiarModoJugador(nuevoModo) {
   modoJ2 = nuevoModo;
+  reiniciar();
 }
 
 function iniciarCuentaRegresiva() {
@@ -299,4 +342,79 @@ function reiniciarCuentaRegresiva() {
 
 function detenerRegresion() {
   clearInterval(intervalo);
+}
+
+function mejorPosicion(tablero) {
+  for (let i = 2; i > 0; i--) {
+    let jugador = "j" + i;
+    console.log(jugador);
+    if (
+      ((tablero[1].className == jugador && tablero[2].className == jugador) ||
+        (tablero[3].className == jugador && tablero[6].className == jugador) ||
+        (tablero[4].className == jugador && tablero[8].className == jugador)) &&
+      tablero[0].className == "none"
+    ) {
+      return 0;
+    } else if (
+      ((tablero[0].className == jugador && tablero[2].className == jugador) ||
+        (tablero[4].className == jugador && tablero[7].className == jugador)) &&
+      tablero[1].className == "none"
+    ) {
+      return 1;
+    } else if (
+      ((tablero[0].className == jugador && tablero[1].className == jugador) ||
+        (tablero[5].className == jugador && tablero[8].className == jugador) ||
+        (tablero[4].className == jugador && tablero[6].className == jugador)) &&
+      tablero[2].className == "none"
+    ) {
+      return 2;
+    } else if (
+      ((tablero[0].className == jugador && tablero[6].className == jugador) ||
+        (tablero[4].className == jugador && tablero[5].className == jugador)) &&
+      tablero[3].className == "none"
+    ) {
+      return 3;
+    } else if (
+      ((tablero[1].className == jugador && tablero[7].className == jugador) ||
+        (tablero[3].className == jugador && tablero[5].className == jugador) ||
+        (tablero[0].className == jugador && tablero[8].className == jugador)) &&
+      tablero[4].className == "none"
+    ) {
+      return 4;
+    } else if (
+      ((tablero[2].className == jugador && tablero[8].className == jugador) ||
+        (tablero[3].className == jugador && tablero[4].className == jugador)) &&
+      tablero[5].className == "none"
+    ) {
+      return 5;
+    } else if (
+      ((tablero[7].className == jugador && tablero[8].className == jugador) ||
+        (tablero[0].className == jugador && tablero[3].className == jugador) ||
+        (tablero[2].className == jugador && tablero[4].className == jugador)) &&
+      tablero[6].className == "none"
+    ) {
+      return 6;
+    } else if (
+      ((tablero[1].className == jugador && tablero[4].className == jugador) ||
+        (tablero[6].className == jugador && tablero[8].className == jugador)) &&
+      tablero[7].className == "none"
+    ) {
+      return 7;
+    } else if (
+      ((tablero[6].className == jugador && tablero[7].className == jugador) ||
+        (tablero[2].className == jugador && tablero[5].className == jugador) ||
+        (tablero[0].className == jugador && tablero[4].className == jugador)) &&
+      tablero[8].className == "none"
+    ) {
+      return 8;
+    }
+  }
+
+  let jugado = false;
+  while (!jugado) {
+    let idCasilla = parseInt(Math.random() * 9);
+    if (tablero[idCasilla].className == "none") {
+      return idCasilla;
+    }
+  }
 }
