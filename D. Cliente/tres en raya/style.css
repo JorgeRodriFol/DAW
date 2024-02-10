@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(254, 208, 100);
+}
+
 .contenedor {
   display: flex;
   justify-content: center;
@@ -77,8 +81,8 @@
   grid-row-gap: 10px;
 }
 
-.tablero div {
-  background-color: rgb(24, 24, 24);
+.tablero button {
+  background-color: rgb(255, 213, 146);
   border: solid black 0.1em;
   border-radius: 20px;
 }
@@ -136,6 +140,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.tablero button div {
+  border: solid black 0.2em;
 }
 
 .estadisticas {

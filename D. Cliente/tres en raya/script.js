@@ -21,6 +21,8 @@ function jugadaJugador(id, jugador) {
       let casilla = document.getElementById(id);
       if (modo == "nueve") {
         if (casilla.className == "none") {
+          pintarFicha(casilla, "j2");
+          setTimeout(comprobarVictoria, 250);
         }
       } else {
         if (fichasJ2 < 3 && casilla.className == "none") {
@@ -293,13 +295,13 @@ function reiniciar() {
 
 function pintarFicha(casilla, jugador) {
   let ficha = document.createElement("div");
-  ficha.style.borderRadius = "50%";
-  ficha.style.border = "none";
   switch (jugador) {
     case "j1":
       ficha.style.backgroundColor = "red";
+      ficha.style.borderRadius = "50%";
       break;
     case "j2":
+      ficha.style.borderRadius = "25%";
       ficha.style.backgroundColor = "blue";
       break;
   }
