@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slider simple con jQuery</title>
+    <script
+      type="text/JAVASCRIPT"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        setInterval(function () {
+          // asignamos a una variable el valor de los elementos primero
+          var primero = $("ul#slideshow").find("li").eq(0);
+          // lo mostramos en un segudo y lo ocultamos en un segundo
+          $(primero).fadeIn(1500).fadeOut(1500);
+          // añadimos el primer elemento al final, con lo que pasa a ser el último
+          $("ul#slideshow").append($(primero));
+        }, 3000);
+      });
+    </script>
+
+    <style>
+      #slideshow li {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul id="slideshow">
+      <li>
+        <h2 rel="yummy fruit!">Fruit</h2>
+        <img src="../img/OnlyGamesLogo.png" alt="fruit" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </li>
+      <li>
+        <h2>Vegetables</h2>
+        <img src="../img/OnlyGamesLogo.png" alt="vegetables" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </li>
+      <li>
+        <h2>Bread</h2>
+        <img src="../img/OnlyGamesLogo.png" alt="bread" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -179,6 +179,10 @@ label {
   grid-area: 2 / 2 / 3 / 3;
 }
 
+.slideshow img {
+  height: 363px;
+}
+
 .body > h1,
 .body > div {
   color: white;
@@ -198,6 +202,13 @@ label {
   width: 95px;
   height: 95px;
   transition: 0.2s;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .tarjeta {
